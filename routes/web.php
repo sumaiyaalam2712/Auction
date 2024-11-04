@@ -47,3 +47,4 @@ Route::get('/profile',[ProfileController::class,'index'])->name('profile.index')
 Route::get('/cars-and-bids',[CarBidController::class,'index'])->name('car_bid.index');
 Route::get('/register',[RegisterController::class,'index'])->name('register.index');
 Route::get('/sell-car',[SellCarController::class,'index'])->name('sell_car.index');
+Route::view('/app-frontend','frontend.app');
