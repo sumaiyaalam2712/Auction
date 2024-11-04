@@ -9,6 +9,8 @@ use App\Http\Controllers\Web\Frontend\CarBidController;
 use App\Http\Controllers\Web\Frontend\HomeController;
 use App\Http\Controllers\Web\Frontend\LoginController;
 use App\Http\Controllers\Web\Frontend\ProfileController;
+use App\Http\Controllers\Web\Frontend\RegisterController;
+use App\Http\Controllers\Web\Frontend\SellCarController;
 
 
 /*
@@ -43,3 +45,5 @@ Route::get('/login',[LoginController::class,'index'])->name('login.index');
 Route::get('/auction',[AuctionController::class,'index'])->name('auction.index');
 Route::get('/profile',[ProfileController::class,'index'])->name('profile.index');
 Route::get('/cars-and-bids',[CarBidController::class,'index'])->name('car_bid.index');
+Route::get('/register',[RegisterController::class,'index'])->name('register.index');
+Route::get('/sell-car',[SellCarController::class,'index'])->name('sell_car.index');
