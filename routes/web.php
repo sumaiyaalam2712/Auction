@@ -11,6 +11,9 @@ use App\Http\Controllers\Web\Frontend\LoginController;
 use App\Http\Controllers\Web\Frontend\ProfileController;
 use App\Http\Controllers\Web\Frontend\RegisterController;
 use App\Http\Controllers\Web\Frontend\SellCarController;
+use App\Http\Controllers\Web\Backend\CarController;
+use App\Http\Controllers\Web\Backend\CardInformationController;
+
 
 
 /*
@@ -38,6 +41,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
+Route::view('/app-frontend','frontend.app');
 Route::get('/',[HomeController::class,'index'])->name('home.index');
 Route::get('/bidder-profile',[BidderProfileController::class,'index'])->name('bidder_profile.index');
 Route::get('/car-single',[CarSingleController::class,'index'])->name('car_single.index');
@@ -47,4 +51,8 @@ Route::get('/profile',[ProfileController::class,'index'])->name('profile.index')
 Route::get('/cars-and-bids',[CarBidController::class,'index'])->name('car_bid.index');
 Route::get('/register',[RegisterController::class,'index'])->name('register.index');
 Route::get('/sell-car',[SellCarController::class,'index'])->name('sell_car.index');
-Route::view('/app-frontend','frontend.app');
+
+
+
+Route::post('/sell-car',[CarController::class,'store'])->name('car.store');
+Route::post('/card-information',[CardInformationController::class,'store'])->name('card.store');
