@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    @include('frontend.partial.header')
     <main>
         <!-- auth login area :: start  -->
         <section class="auth--area login--area">

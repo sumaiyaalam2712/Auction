@@ -19,7 +19,7 @@
     @yield('content')
 
     <!-- Testimonial area :: start  -->
-    @include('frontend.partial.review')
+
     <!-- Testimonial area :: end  -->
 
     <!-- footer :: start  -->

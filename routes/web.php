@@ -13,6 +13,7 @@ use App\Http\Controllers\Web\Frontend\RegisterController;
 use App\Http\Controllers\Web\Frontend\SellCarController;
 use App\Http\Controllers\Web\Backend\CarController;
 use App\Http\Controllers\Web\Backend\CardInformationController;
+use App\Http\Controllers\Web\Frontend\WriteReviewController;
 
 
 
@@ -51,6 +52,17 @@ Route::get('/profile',[ProfileController::class,'index'])->name('profile.index')
 Route::get('/cars-and-bids',[CarBidController::class,'index'])->name('car_bid.index');
 Route::get('/register',[RegisterController::class,'index'])->name('register.index');
 Route::get('/sell-car',[SellCarController::class,'index'])->name('sell_car.index');
+Route::get('/review',[WriteReviewController::class,'reviewShow'])->name('review.index');
+
+
+
+
+
+
+Route::get('/write-review',[WriteReviewController::class,'index'])->name('write_review.index');
+Route::post('/write-review',[WriteReviewController::class,'store'])->name('write_review.store');
+
+
 
 
 
