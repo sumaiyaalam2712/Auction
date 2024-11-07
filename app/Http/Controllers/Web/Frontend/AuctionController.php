@@ -9,6 +9,6 @@ class AuctionController extends Controller
 {
     public function index()
     {
-          return view('frontend.layout.auction');
+          return view('backend.layout.auction');
     }
 }

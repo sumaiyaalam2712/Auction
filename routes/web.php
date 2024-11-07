@@ -14,6 +14,7 @@ use App\Http\Controllers\Web\Frontend\SellCarController;
 use App\Http\Controllers\Web\Backend\CarController;
 use App\Http\Controllers\Web\Backend\CardInformationController;
 use App\Http\Controllers\Web\Frontend\WriteReviewController;
+use App\Http\Controllers\Web\Backend\DashboardController;
 
 
 
@@ -68,3 +69,7 @@ Route::post('/write-review',[WriteReviewController::class,'store'])->name('write
 
 Route::post('/sell-car',[CarController::class,'store'])->name('car.store');
 Route::post('/card-information',[CardInformationController::class,'store'])->name('card.store');
+
+
+
+Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard.index');
