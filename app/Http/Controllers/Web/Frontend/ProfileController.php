@@ -20,8 +20,10 @@ class ProfileController extends Controller
     {
         $request->validate(
             [
-                'name'=>'string',
-               'contact'=>'regex:/^([0-9\s\-\+\(\)]*)$/|min:10'
+                'name'=>'required',
+                'address'=>'nullable',
+               'contact'=>'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+               'biography'=>'required'
             ]
 
             );
@@ -31,10 +33,7 @@ class ProfileController extends Controller
       $data->contact=$request->contact;
       $data->address=$request->address;
       $data->biography=$request->biography;
-      $data->country=$request->country;
-      $data->city=$request->city;
-      $data->email=$request->email;
-      $data->password=Hash::make($request->password);
+
 
       $data->save();
       return redirect()->back();
@@ -43,6 +42,15 @@ class ProfileController extends Controller
     public function emailStore(Request $request)
 
     {
+
+        $request->validate(
+            [
+
+               'country'=>'nullable|string',
+               'city'=>'required'
+            ]
+
+            );
 
       $data=User::find(auth()->user()->id);
 
@@ -59,6 +67,14 @@ class ProfileController extends Controller
     public function picStore(Request $request)
 
     {
+
+        $request->validate(
+            [
+
+           'profile_pic'=>'image|mimes:jpeg,png,jpg,gif,svg'
+            ]
+
+            );
 
       $data=User::find(auth()->user()->id);
 

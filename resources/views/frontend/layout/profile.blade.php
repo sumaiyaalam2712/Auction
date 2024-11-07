@@ -12,13 +12,14 @@
                             <div class="profile--contents">
                                 <!-- preview--img  -->
 
+
                                 <form action="{{ route('profile.pic.store') }}" data-aos="fade-up" data-aos-duration="1000"
                                     method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="preview--img">
                                         <img id="image-preview" src="./assets/images/profile.png" alt="" />
                                     </div>
-                                    <label for="upload">
+                                    <label for="profile_pic">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
                                             viewBox="0 0 18 18" fill="none">
                                             <path
@@ -1035,13 +1036,15 @@
                                                     <div class="col-md-4 mt_25">
                                                         <div class="input--group">
                                                             <label for="name">Full Name</label>
-                                                            <input type="text" id="name" name="name" />
+                                                            <input type="text" id="name" name="name"
+                                                                placeholder="Name" />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4 mt_25">
                                                         <div class="input--group">
                                                             <label for="contact">Contact Number</label>
-                                                            <input type="text" id="contact" name="contact" />
+                                                            <input type="text" id="contact" name="contact"
+                                                                placeholder="Contact Number" />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4 mt_25">
@@ -1075,14 +1078,16 @@
                                                     <div class="col-md-6 mt_25">
                                                         <div class="input--group">
                                                             <label for="email">Email Address</label>
-                                                            <input type="email" id="email" name="email" />
+                                                            <input type="email" id="email" name="email"
+                                                                placeholder="Email" />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 mt_25">
                                                         <div class="input--group">
                                                             <label for="password">Password</label>
                                                             <div class="feild">
-                                                                <input type="password" id="password" name="password" />
+                                                                <input type="password" id="password" name="password"
+                                                                    placeholder="Password" />
                                                                 <svg class="eye" xmlns="http://www.w3.org/2000/svg"
                                                                     width="20" height="18" viewBox="0 0 20 18"
                                                                     fill="none">
@@ -1119,48 +1124,7 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <form action="#">
-                                        <!-- credit--card info  -->
-                                        <div class="credit--card--info mt_35">
-                                            <h5>Credit Card Information</h5>
-                                            <!-- box--info  -->
-                                            <div class="box--info">
-                                                <div class="row">
-                                                    <div class="col-md-6 mt_25">
-                                                        <div class="input--group">
-                                                            <label for="card-name">Card Name</label>
-                                                            <input type="text" id="card-name"
-                                                                placeholder="Enter your card name" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 mt_25">
-                                                        <div class="input--group">
-                                                            <label for="card-number">Card Number</label>
-                                                            <input type="number" id="card-number"
-                                                                placeholder="Enter card number" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-2 mt_25">
-                                                        <div class="input--group">
-                                                            <label for="Expiration">Expiration</label>
-                                                            <input type="date" id="Expiration" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-2 col-md-6 mt_25">
-                                                        <div class="input--group">
-                                                            <label for="cvc">CVC (3 or 4 digit code)</label>
-                                                            <input type="number" id="cvc" placeholder="CVC" />
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="buttons mt_30">
-                                                            <button class="button">Save Changes</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
+
                                     <div class="delete--button">
                                         <a href="#" class="button"> Delete Account </a>
                                     </div>
