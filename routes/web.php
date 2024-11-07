@@ -49,20 +49,22 @@ Route::get('/bidder-profile',[BidderProfileController::class,'index'])->name('bi
 Route::get('/car-single',[CarSingleController::class,'index'])->name('car_single.index');
 Route::get('/login',[LoginController::class,'index'])->name('login.index');
 Route::get('/auction',[AuctionController::class,'index'])->name('auction.index');
-Route::get('/profile',[ProfileController::class,'index'])->name('profile.index');
 Route::get('/cars-and-bids',[CarBidController::class,'index'])->name('car_bid.index');
 Route::get('/register',[RegisterController::class,'index'])->name('register.index');
 Route::get('/sell-car',[SellCarController::class,'index'])->name('sell_car.index');
-Route::get('/review',[WriteReviewController::class,'reviewShow'])->name('review.index');
 
 
 
 
+Route::get('/profile',[ProfileController::class,'index'])->name('profile.index');
+Route::post('/profile',[ProfileController::class,'store'])->name('profile.store');
+Route::post('/profile-email',[ProfileController::class,'emailStore'])->name('profile.email.store');
+Route::post('/profile-pic',[ProfileController::class,'picStore'])->name('profile.pic.store');
 
 
 Route::get('/write-review',[WriteReviewController::class,'index'])->name('write_review.index');
 Route::post('/write-review',[WriteReviewController::class,'store'])->name('write_review.store');
-
+Route::get('/review',[WriteReviewController::class,'reviewShow'])->name('review.index');
 
 
 

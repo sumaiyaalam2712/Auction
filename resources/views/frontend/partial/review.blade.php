@@ -33,13 +33,13 @@
                         <div class="client">
                             <img src="./assets/images/client.png" alt="" />
                             <div>
-                                <p>Prateek Kukreja</p>
+                                <p>{{ $item['user_id'] }}</p>
                                 <span>28th May 2024</span>
                             </div>
                         </div>
                         <!-- rating  -->
                         <div class="rating">
-                            5.0
+                            {{ $item['star'] }}
                             <svg xmlns="http://www.w3.org/2000/svg" width="104" height="19" viewBox="0 0 104 19"
                                 fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd"

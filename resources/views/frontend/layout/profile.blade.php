@@ -11,7 +11,10 @@
                             <!-- profile--contents  -->
                             <div class="profile--contents">
                                 <!-- preview--img  -->
-                                <form action="#" data-aos="fade-up" data-aos-duration="1000">
+
+                                <form action="{{ route('profile.pic.store') }}" data-aos="fade-up" data-aos-duration="1000"
+                                    method="POST" enctype="multipart/form-data">
+                                    @csrf
                                     <div class="preview--img">
                                         <img id="image-preview" src="./assets/images/profile.png" alt="" />
                                     </div>
@@ -29,7 +32,7 @@
                                                 fill="white" />
                                         </svg>
                                     </label>
-                                    <input type="file" id="upload" />
+                                    <input type="file" id="profile_pic" name="profile_pic" />
                                 </form>
                                 <!-- profile--name  -->
                                 <div class="profile--name">
@@ -1020,7 +1023,9 @@
                                 </div>
                                 <div class="tab-pane fade" id="pills-settings" role="tabpanel"
                                     aria-labelledby="pills-settings-tab" tabindex="0">
-                                    <form action="#">
+                                    <form action="{{ route('profile.store') }}" method="POST"
+                                        enctype="multipart/form-data">
+                                        @csrf
                                         <!-- public info  -->
                                         <div class="public--info mt_35">
                                             <h5>Public Info</h5>
@@ -1029,37 +1034,38 @@
                                                 <div class="row">
                                                     <div class="col-md-4 mt_25">
                                                         <div class="input--group">
-                                                            <label for="fname">Full Name</label>
-                                                            <input type="text" id="fname" value="Jason Mark" />
+                                                            <label for="name">Full Name</label>
+                                                            <input type="text" id="name" name="name" />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4 mt_25">
                                                         <div class="input--group">
-                                                            <label for="number">Contact Number</label>
-                                                            <input type="tel" id="number" value="+880 1458 564" />
+                                                            <label for="contact">Contact Number</label>
+                                                            <input type="text" id="contact" name="contact" />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-4 mt_25">
                                                         <div class="input--group">
                                                             <label for="address">Address</label>
-                                                            <input type="text" id="address"
-                                                                value="Sunderland, Gmail, New york" />
+                                                            <input type="text" id="address" name="address" />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12 mt_25">
                                                         <div class="input--group">
-                                                            <label for="bio">Biography</label>
-                                                            <textarea id="bio" placeholder="Tell Something about yourself"></textarea>
+                                                            <label for="biography">Biography</label>
+                                                            <textarea id="biography" name="biography" placeholder="Tell Something about yourself"></textarea>
                                                         </div>
                                                         <div class="buttons mt_30">
-                                                            <button class="button">Save Changes</button>
+                                                            <button class="button" type="submit">Save Changes</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </form>
-                                    <form action="#">
+                                    <form action="{{ route('profile.email.store') }}" method="POST"
+                                        enctype="multipart/form-data">
+                                        @csrf
                                         <!-- private info  -->
                                         <div class="private--info mt_35">
                                             <h5>Private Info</h5>
@@ -1069,16 +1075,14 @@
                                                     <div class="col-md-6 mt_25">
                                                         <div class="input--group">
                                                             <label for="email">Email Address</label>
-                                                            <input type="text" id="email"
-                                                                value="m32220@gmail.com" />
+                                                            <input type="email" id="email" name="email" />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6 mt_25">
                                                         <div class="input--group">
                                                             <label for="password">Password</label>
                                                             <div class="feild">
-                                                                <input type="password" id="password"
-                                                                    value="hello1234" />
+                                                                <input type="password" id="password" name="password" />
                                                                 <svg class="eye" xmlns="http://www.w3.org/2000/svg"
                                                                     width="20" height="18" viewBox="0 0 20 18"
                                                                     fill="none">
@@ -1092,28 +1096,23 @@
                                                     <div class="col-md-2 mt_25">
                                                         <div class="input--group">
                                                             <label for="city">City</label>
-                                                            <input type="text" id="city" value="Sunderland" />
+                                                            <input type="text" id="city" name="city" />
                                                         </div>
                                                     </div>
                                                     <div class="col-md-5 mt_25">
                                                         <div class="input--group">
-                                                            <label for="state">State</label>
-                                                            <select id="state">
+                                                            <label for="country">Country</label>
+                                                            <select id="country" name="country">
                                                                 <option value="1" selected>New York</option>
                                                                 <option value="2">Texas</option>
                                                                 <option value="3">Miami</option>
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-5 mt_25">
-                                                        <div class="input--group">
-                                                            <label for="zip">Zip Code</label>
-                                                            <input type="number" id="zip" value="599029" />
-                                                        </div>
-                                                    </div>
+
                                                     <div class="col-md-12">
                                                         <div class="buttons mt_30">
-                                                            <button class="button">Save Changes</button>
+                                                            <button class="button" type="submit">Save Changes</button>
                                                         </div>
                                                     </div>
                                                 </div>
