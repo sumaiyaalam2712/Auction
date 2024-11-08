@@ -15,6 +15,7 @@ use App\Http\Controllers\Web\Backend\CarController;
 use App\Http\Controllers\Web\Backend\CardInformationController;
 use App\Http\Controllers\Web\Frontend\WriteReviewController;
 use App\Http\Controllers\Web\Backend\DashboardController;
+use App\Http\Controllers\Web\Backend\UserController;
 
 
 
@@ -77,3 +78,4 @@ Route::post('/card-information',[CardInformationController::class,'store'])->nam
 
 
 Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard.index');
+Route::get('/dashboard/user',[UserController::class,'index'])->name('user.index');

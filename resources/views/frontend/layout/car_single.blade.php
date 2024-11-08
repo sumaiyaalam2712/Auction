@@ -190,6 +190,11 @@
                             <div class="table--wrapper">
                                 <!-- table  -->
                                 <div class="table">
+
+                                    <div class="tr">
+                                        <div class="tt">Brand</div>
+                                        <div class="td">{{ $car['brand'] }}</div>
+                                    </div>
                                     <div class="tr">
                                         <div class="tt">Make</div>
                                         <div class="td">{{ $car['make'] }}</div>

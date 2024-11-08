@@ -126,13 +126,13 @@
                                         </svg>
                                     </div>
                                     <div class="car--model">
-                                        <a href="{{ route('car_single.index', $car->id) }}">1987 Renault Alliance GTA
-                                            Convertible</a>
+                                        <a href="{{ route('car_single.index', $car->id) }}">{{ $car['year'] }}
+                                            {{ $car['title'] }}</a>
                                         <p>
-                                            1 Owner, Dual-Motor AWD, Florida-Owned, Mostly Unmodified
+                                            {{ $car['brand'] }},{{ $car['model'] }}, {{ $car['exterior_color'] }}
                                         </p>
                                         <div class="card--footer">
-                                            <p>{{ $car['engine'] }}, FL 33315</p>
+                                            <p>{{ $car['engine'] }},{{ $car['transmission'] }}</p>
                                             <a href="car-single.html" class="buttonv2 button">Place a Bid</a>
                                         </div>
                                     </div>
