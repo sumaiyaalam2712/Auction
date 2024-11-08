@@ -43,10 +43,10 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::view('/app-frontend','frontend.app');
+
 Route::get('/',[HomeController::class,'index'])->name('home.index');
 Route::get('/bidder-profile',[BidderProfileController::class,'index'])->name('bidder_profile.index');
-Route::get('/car-single',[CarSingleController::class,'index'])->name('car_single.index');
+Route::get('/car-single/{id}',[CarSingleController::class,'index'])->name('car_single.index');
 Route::get('/login',[LoginController::class,'index'])->name('login.index');
 Route::get('/auction',[AuctionController::class,'index'])->name('auction.index');
 Route::get('/cars-and-bids',[CarBidController::class,'index'])->name('car_bid.index');
@@ -60,11 +60,13 @@ Route::get('/profile',[ProfileController::class,'index'])->name('profile.index')
 Route::post('/profile',[ProfileController::class,'store'])->name('profile.store');
 Route::post('/profile-email',[ProfileController::class,'emailStore'])->name('profile.email.store');
 Route::post('/profile-pic',[ProfileController::class,'picStore'])->name('profile.pic.store');
+Route::post('/profile-card',[ProfileController::class,'cardStore'])->name('profile.card.store');
 
 
 Route::get('/write-review',[WriteReviewController::class,'index'])->name('write_review.index');
 Route::post('/write-review',[WriteReviewController::class,'store'])->name('write_review.store');
-Route::get('/review',[WriteReviewController::class,'reviewShow'])->name('review.index');
+
+
 
 
 

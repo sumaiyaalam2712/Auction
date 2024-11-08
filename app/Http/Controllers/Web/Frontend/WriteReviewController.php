@@ -34,10 +34,5 @@ class WriteReviewController extends Controller
     }
 
 
-    public function reviewShow()
-    {
 
-        $data=Review::all();
-          return view('frontend.partial.review',['datas'=>$data]);
-    }
 }

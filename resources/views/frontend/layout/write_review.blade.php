@@ -7,6 +7,7 @@
     <title>Sign Up</title>
     <!-- ==== Favicon ==== -->
     <link rel="icon" type="image/png" href="assets/images/logo-sm.svg" />
+    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
     <!-- ==== All Css Links ==== -->
     @include('frontend.partial.style')
 </head>
@@ -28,7 +29,8 @@
                         <div class="col-md-6">
                             <div class="input--group">
                                 <label for="review">Write Review</label>
-                                <textarea class="form-control" id="review" name="review" placeholder="Please write review here" required></textarea>
+                                <textarea class="form-control form-control-lg" id="review" name="review" placeholder="Please write review here"
+                                    required></textarea>
                                 <div class="invalid-feedback">
                                     Please write review
                                 </div>
@@ -39,7 +41,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="input--group">
-                                <label for="star">**STAR**</label>
+                                <label for="star">**STAR** rating</label>
                                 <select required name="star">
                                     <option value="5.00" selected>5</option>
                                     <option value="4.00">4</option>
@@ -77,8 +79,15 @@
 
     </div>
 
-
+    @include('frontend.partial.footer')
     @include('frontend.partial.js')
+
+    <script>
+        ClassicEditor.create(document.querySelector('#review'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 </body>
 
 </html>

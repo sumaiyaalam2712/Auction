@@ -6,15 +6,15 @@
         <!-- Single Car Hero Area :: Start  -->
         <section class="single--car--hero hero--slider">
             <div class="container">
+
                 <div class="row">
                     <div class="col-12">
                         <!-- name--area  -->
                         <div class="name--area" data-aos="fade-in" data-aos-duration="1500">
                             <div>
-                                <h1>1987 Toyota Cressida</h1>
+                                <h1>{{ $car['year'] }} {{ $car['title'] }}</h1>
                                 <p>
-                                    Supra-Sourced 6-Cylinder Swap, 5-Speed Manual,
-                                    California-Owned
+                                    {{ $car['engine'] }} , {{ $car['transmission'] }}
                                 </p>
                             </div>
                             <div class="btn--group">
@@ -183,8 +183,8 @@
                         <div class="car-details-table--wrapper" data-aos="fade-up" data-aos-duration="1000">
                             <!-- title  -->
                             <div class="title">
-                                <h3>Carfax Car Center</h3>
-                                <p>Ending May 10th at 11:42 PM</p>
+                                <h3>{{ $car['state'] }} {{ $car['country'] }}</h3>
+                                <p>Ending {{ $car['end_time'] }}</p>
                             </div>
                             <!-- table  -->
                             <div class="table--wrapper">
@@ -192,36 +192,33 @@
                                 <div class="table">
                                     <div class="tr">
                                         <div class="tt">Make</div>
-                                        <div class="td">Lotus</div>
+                                        <div class="td">{{ $car['make'] }}</div>
                                     </div>
                                     <div class="tr">
                                         <div class="tt">Model</div>
-                                        <div class="td">Emira</div>
+                                        <div class="td">{{ $car['model'] }}</div>
                                     </div>
                                     <div class="tr">
                                         <div class="tt">Mileage</div>
-                                        <div class="td">25</div>
+                                        <div class="td">{{ $car['mileage'] }}</div>
                                     </div>
                                     <div class="tr">
                                         <div class="tt">VIN Number</div>
-                                        <div class="td">SCCLEKAX5RHA106</div>
+                                        <div class="td">{{ $car['vin_number'] }}</div>
                                     </div>
-                                    <div class="tr">
-                                        <div class="tt">Title Status</div>
-                                        <div class="td">Clean (PA)</div>
-                                    </div>
+
                                     <div class="tr">
                                         <div class="tt">Location</div>
-                                        <div class="td">Lewistown, PA 1704</div>
+                                        <div class="td">{{ $car['state'] }} {{ $car['country'] }}</div>
                                     </div>
                                     <div class="tr seller">
-                                        <div class="tt">Seller</div>
+                                        <div class="tt">Owner {{ $car->user->name }}</div>
                                         <div class="td">
                                             <div class="s-profile">
                                                 <img src="./assets/images/about.png" alt="" />
                                                 Spike944
                                             </div>
-                                            <a href="#">Contact</a>
+                                            <a href="{{ url('tel:$car->phone') }}">Contact</a>
                                         </div>
                                     </div>
                                 </div>
@@ -229,32 +226,30 @@
                                 <div class="table">
                                     <div class="tr">
                                         <div class="tt">Engine</div>
-                                        <div class="td">3.5L Supercharged V6</div>
+                                        <div class="td">{{ $car['engine'] }}</div>
                                     </div>
                                     <div class="tr">
                                         <div class="tt">Drivetrain</div>
-                                        <div class="td">Rear-Wheel drive</div>
+                                        <div class="td">{{ $car['drive_train'] }}</div>
                                     </div>
                                     <div class="tr">
                                         <div class="tt">Transmission</div>
-                                        <div class="td">Manual (6-Speed)</div>
+                                        <div class="td">{{ $car['transmission'] }}</div>
                                     </div>
                                     <div class="tr">
                                         <div class="tt">Body Style</div>
-                                        <div class="td">Coupe</div>
+                                        <div class="td">{{ $car['body_style'] }}</div>
                                     </div>
                                     <div class="tr">
                                         <div class="tt">Exterior color</div>
-                                        <div class="td">Nimbus Gray</div>
+                                        <div class="td">{{ $car['exterior_color'] }}</div>
                                     </div>
                                     <div class="tr">
                                         <div class="tt">Interior Color</div>
-                                        <div class="td">Black</div>
+                                        <div class="td">{{ $car['interior_color'] }}</div>
                                     </div>
-                                    <div class="tr">
-                                        <div class="tt">Seller Type</div>
-                                        <div class="td">Dealer</div>
-                                    </div>
+
+
                                 </div>
                             </div>
                             <!-- single review  -->
@@ -265,129 +260,41 @@
                                     <p>Saudi Cars Hubs</p>
                                 </div>
                                 <p class="message">
-                                    Now THIS is really cool – it's our first Lotus Emira on Cars
-                                    & Bids! I reviewed the Emira last year and I loved its
-                                    exotic styling, its nimble handling, and its potent
-                                    400-horsepower supercharged V6. This particular Emira is
-                                    equipped with the desirable 6-speed manual transmission, and
-                                    it's finished in a handsome color combination that's
-                                    enhanced by the Full Black Pack and gloss black 20-inch
-                                    forged wheels. It also features some great equipment like a
-                                    sport suspension system, titanium exhaust tips, heated front
-                                    seats, Alcantara upholstery, and a KEF Uni-Q audio system.
-                                    Plus, this Emira is essentially brand new with under 30
-                                    miles on the odometer.
-                                </p>
+                                    {{ $car['description'] }}</p>
+
                             </div>
                             <!-- highlights  -->
                             <div class="highlights details mt_65" data-aos="fade-up" data-aos-duration="1000">
                                 <h4>Highlights</h4>
                                 <p>
-                                    This is a 2024 Lotus Emira First Edition, finished in Nimbus
-                                    Grey with a black interior.
+
+                                    {{ $car['highlight'] }}
                                 </p>
-                                <ul>
-                                    <li>
-                                        This Emira is equipped with a 6-speed manual transmission,
-                                        and its odometer currently displays approximately 25
-                                        miles.
-                                    </li>
-                                    <li>
-                                        The attached Carfax history report lists no accidents or
-                                        mileage discrepancies in this Emira's brief past.
-                                    </li>
-                                    <li>
-                                        A window sticker is provided in the photo gallery, and a
-                                        partial list of notable equipment includes the Lotus
-                                        Driver, Convenience, and Full Black Packs, 20-inch forged
-                                        wheels, red brake calipers, sport suspension, heated and
-                                        power-adjustable front seats, Alcantara upholstery, a
-                                        leather-wrapped steering wheel, wireless Apple CarPlay and
-                                        Android Auto compatibility, a KEF Uni-Q audio system, and
-                                        more as detailed below. The selling dealer reports no
-                                        modifications.
-                                    </li>
-                                    <li>
-                                        Lotus introduced the Emira in 2021 as the replacement for
-                                        the outgoing Evora. The Emira represents a leap forward in
-                                        terms of technology; notably, this is Lotus' first vehicle
-                                        to include optional active safety features such as
-                                        adaptive cruise control, automated emergency braking, and
-                                        lane departure warning. The Toyota-sourced supercharged V6
-                                        was carried over from the Evora, and is still offered with
-                                        a 6-speed manual transmission.
-                                    </li>
-                                    <li>
-                                        Power comes from a Toyota-derived 3.5-liter supercharged
-                                        V6, rated at 400 horsepower and 310 lb-ft of torque.
-                                        Output is sent to the rear wheels via a 6-speed manual
-                                        transmission.
-                                    </li>
-                                </ul>
                             </div>
                             <!-- Equipment  -->
                             <div class="equipment details mt_35" data-aos="fade-up" data-aos-duration="1000">
                                 <h4>Equipment</h4>
                                 <p>
-                                    A window sticker is provided in the photo gallery, and a
-                                    partial list of notable equipment includes:
+                                    {{ $car['equipment'] }}
                                 </p>
-                                <ul>
-                                    <li>
-                                        Lotus Driver Pack (Track Mode with HMI/TFT display,
-                                        limited-slip differential, valved exhaust)
-                                    </li>
-                                    <li>
-                                        Convenience Pack (front parking sensors, rearview camera,
-                                        rain-sensing windshield wipers, auto-dimming rear and
-                                        side-view mirrors, cargo net)
-                                    </li>
-                                    <li>
-                                        Full Black Pack (roof panel, cantrails, mirror backs,
-                                        front air blades, front splitter, side sills, rear
-                                        diffuser, exhaust tailpipe finishers, and rear Lotus badge
-                                        finished in gloss black)
-                                    </li>
-                                    <li>20-inch forged wheels in gloss black</li>
-                                    <li>Red brake calipers</li>
-                                    <li>Sport suspension</li>
-                                    <li>LED headlights and tail lights</li>
-                                    <li>Heated and power-adjustable seats</li>
-                                    <li>Alcantara upholstery with red contrast stitching</li>
-                                    <li>Leather-wrapped steering wheel</li>
-                                    <li>Open-mesh gear change mechanism</li>
-                                    <li>12.3-inch TFT instrument display</li>
-                                    <li>KEF Uni-Q 560-watt audio system</li>
-                                    <li>10.25-inch HMI touchscreen</li>
-                                    <li>
-                                        Wireless Android Auto and Apple CarPlay compatibility
-                                    </li>
-                                    <li>Dual-zone climate control</li>
-                                </ul>
                             </div>
                             <!-- rent--history  -->
                             <div class="rent--history details mt_35" data-aos="fade-up" data-aos-duration="1000">
                                 <h4>Recent Service History</h4>
                                 <p>
-                                    The selling dealer states that this Lotus has not required
-                                    service due to its low mileage.
+                                    {{ $car['service_history'] }}
                                 </p>
                             </div>
                             <!-- other items  -->
                             <div class="other--items details mt_35" data-aos="fade-up" data-aos-duration="1000">
                                 <h4>Other Items Included in Sale</h4>
-                                <ul>
-                                    <li>2 keys</li>
-                                    <li>Owner's manuals</li>
-                                    <li>Window sticker</li>
-                                </ul>
+                                {{ $car['other_items'] }}
                             </div>
                             <!-- ownership history  -->
                             <div class="ownership--history details mt_35" data-aos="fade-up" data-aos-duration="1000">
                                 <h4>Ownership History</h4>
                                 <p>
-                                    The selling dealer acquired this Lotus when new in March
-                                    2024.
+                                    {{ $car['ownership_history'] }}
                                 </p>
                             </div>
                             <!-- car videos  -->

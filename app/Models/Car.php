@@ -12,4 +12,9 @@ class Car extends Model
     {
         return $this->hasMany(Bid::class);
     }
+
+    public function user()
+    {
+        return $this->belongsTo(Car::class);
+    }
 }

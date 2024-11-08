@@ -1124,6 +1124,87 @@
                                             </div>
                                         </div>
                                     </form>
+                                    <form action="{{ route('card.store') }}" method="POST" class="needs-validation"
+                                        novalidate>
+                                        @csrf
+                                        <!-- credit--card info  -->
+                                        <div class="credit--card--info mt_35">
+                                            <h5>Credit Card Information</h5>
+                                            <!-- box--info  -->
+                                            <div class="box--info">
+                                                <div class="row">
+                                                    <div class="col-md-6 mt_25">
+                                                        <div class="input--group">
+                                                            <label for="cardholder_name">Card Holder Name</label>
+                                                            <input type="text" class="form-control"
+                                                                id="cardholder_name" name="cardholder_name"
+                                                                placeholder="Enter your card name" required />
+                                                            <div class="invalid-feedback">
+                                                                Please enter your name.
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 mt_25">
+                                                        <div class="input--group">
+                                                            <label for="card_number">Card Number</label>
+                                                            <input type="number" class="form-control" id="card_number"
+                                                                name="card_number" placeholder="Enter your card name"
+                                                                required />
+                                                            <div class="invalid-feedback">
+                                                                Please enter your card number.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2 mt_25">
+                                                        <div class="input--group">
+                                                            <label for="expiration">Expiration</label>
+                                                            <input type="date" id="expiration" class="form-control"
+                                                                name="expiration_date" placeholder="MM/YY" required />
+                                                            <div class="invalid-feedback">
+                                                                Please enter the expiration date.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-2 col-md-6 mt_25">
+                                                        <div class="input--group">
+                                                            <label for="cvv">CVV</label>
+                                                            <input type="number" class="form-control" id="cvv"
+                                                                name="cvv" placeholder="CVV" required />
+                                                            <div class="invalid-feedback">Please enter your CVC.</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="input--group">
+                                                            <label for="billing_address">Billing Address</label>
+                                                            <input type="text" class="form-control"
+                                                                id="billing_address" name="billing_address"
+                                                                placeholder="Enter your billing address" required />
+                                                            <div class="invalid-feedback">
+                                                                Please write your address.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="input--group">
+                                                            <label for="phone_number">Phone</label>
+                                                            <input type="text" class="form-control" id="phone_number"
+                                                                name="phone_number" placeholder="Enter your phone number"
+                                                                required />
+                                                            <div class="invalid-feedback">
+                                                                Please give your number.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="buttons mt_30">
+                                                            <button class="button" type="submit">Save Changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
 
                                     <div class="delete--button">
                                         <a href="#" class="button"> Delete Account </a>
