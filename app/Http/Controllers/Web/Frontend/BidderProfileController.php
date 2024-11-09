@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Review;
 use App\Models\Car;
+use Carbon\Carbon;
 
 class BidderProfileController extends Controller
 {
@@ -13,8 +14,14 @@ class BidderProfileController extends Controller
     {
 
         $counts=Car::where('user_id',auth()->user()->id)->count('id');
-        $car=Car::where('user_id',auth()->user()->id)->get();
+        $cars=Car::where('user_id',auth()->user()->id)->paginate(2);
+        $current_time = Carbon::today();
+
+        foreach ($cars as $car) {
+            $end_time = Carbon::parse($car->end_time);
+            $left_time = $current_time->diff($end_time)->format('%d days');
+        }
         $review=Review::all();
-          return view('frontend.layout.bidder_profile',['reviews'=>$review,'cars'=>$car,'count'=>$counts,'cars'=>$car]);
+          return view('frontend.layout.bidder_profile',['reviews'=>$review,'cars'=>$cars,'count'=>$counts,'left_time' => $left_time]);
     }
 }
