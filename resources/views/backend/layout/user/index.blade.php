@@ -38,8 +38,8 @@
                                         <th>Country</th>
                                         <th>City</th>
                                         <th>Biography</th>
-                                        <th>Status</th>
-                                        <th>Actions</th>
+
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -84,10 +84,10 @@
 
                     language: {
                         processing: `<div class="text-center">
-                            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                          </div>
-                            </div>`
+                                <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                              </div>
+                                </div>`
                     },
 
                     scroller: {
@@ -155,18 +155,8 @@
                             orderable: true,
                             searchable: true
                         },
-                        {
-                            data: 'status',
-                            name: 'status',
-                            orderable: true,
-                            searchable: true
-                        },
-                        {
-                            data: 'action',
-                            name: 'action',
-                            orderable: false,
-                            searchable: false
-                        },
+
+
                     ],
                 });
 
@@ -175,98 +165,4 @@
                 });
             }
         });
-
-
-
-        // delete Confirm
-        function showDeleteConfirm(id) {
-            event.preventDefault();
-            Swal.fire({
-                title: 'Are you sure you want to delete this record?',
-                text: 'If you delete this, it will be gone forever.',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, delete it!',
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    deleteItem(id);
-                }
-            });
-        };
-        // Delete Button
-        function deleteItem(id) {
-            var url = '#';
-            var csrfToken = '{{ csrf_token() }}';
-            $.ajax({
-                type: "DELETE",
-                url: url.replace(':id', id),
-                headers: {
-                    'X-CSRF-TOKEN': csrfToken
-                },
-                success: function(resp) {
-                    console.log(resp);
-                    // Reloade DataTable
-                    $('#data-table').DataTable().ajax.reload();
-                    if (resp.success === true) {
-                        // show toast message
-                        toastr.success(resp.message);
-                        location.reload();
-                    } else if (resp.errors) {
-                        toastr.error(resp.errors[0]);
-                    } else {
-                        toastr.error(resp.message);
-                    }
-                }, // success end
-                error: function(error) {
-                    // location.reload();
-                } // Error
-            })
-        }
-
-
-        // Status Change Confirm Alert
-        function showStatusChangeAlert(id) {
-            event.preventDefault();
-
-            Swal.fire({
-                title: 'Are you sure?',
-                text: 'You want to update the status?',
-                icon: 'info',
-                showCancelButton: true,
-                confirmButtonText: 'Yes',
-                cancelButtonText: 'No',
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    statusChange(id);
-                }
-            });
-        }
-
-        // Status Change
-        function statusChange(id) {
-            var url = '#';
-            $.ajax({
-                type: "GET",
-                url: url.replace(':id', id),
-                success: function(resp) {
-                    console.log(resp);
-                    // Reloade DataTable
-                    $('#data-table').DataTable().ajax.reload();
-                    if (resp.success === true) {
-                        // show toast message
-                        toastr.success(resp.message);
-                    } else if (resp.errors) {
-                        toastr.error(resp.errors[0]);
-                    } else {
-                        toastr.error(resp.message);
-                    }
-                }, // success end
-                error: function(error) {
-                    // location.reload();
-                } // Erro
-            });
-        }
-    </script>
-@endpush
+    @endpush

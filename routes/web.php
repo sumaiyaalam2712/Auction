@@ -16,7 +16,7 @@ use App\Http\Controllers\Web\Backend\CardInformationController;
 use App\Http\Controllers\Web\Frontend\WriteReviewController;
 use App\Http\Controllers\Web\Backend\DashboardController;
 use App\Http\Controllers\Web\Backend\UserController;
-
+use App\Http\Controllers\Web\Backend\SearchController;
 
 
 /*
@@ -56,6 +56,9 @@ Route::get('/sell-car',[SellCarController::class,'index'])->name('sell_car.index
 
 
 
+Route::post('/searchCar',[SearchController::class,'searchCar'])->name('search.car');
+
+
 
 Route::get('/profile',[ProfileController::class,'index'])->name('profile.index');
 Route::post('/profile',[ProfileController::class,'store'])->name('profile.store');
@@ -79,3 +82,4 @@ Route::post('/card-information',[CardInformationController::class,'store'])->nam
 
 Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard.index');
 Route::get('/dashboard/user',[UserController::class,'index'])->name('user.index');
+Route::get('{id}/status',[UserController::class,'status'])->name('user.status');

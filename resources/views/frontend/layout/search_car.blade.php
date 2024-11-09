@@ -110,7 +110,7 @@
                 <div class="col-xxl-3 col-lg-4 col-md-6 mt_20" data-aos="fade-up" data-aos-duration="1000"
                     data-aos-offset="0">
                     <!-- car card  -->
-                    @foreach ($cars as $index => $car)
+                    @foreach ($data as $search)
                         <div class="car--card">
                             <div class="img--area">
                                 <img class="w-100" src="./assets/images/car5.png" alt="" />
@@ -124,10 +124,10 @@
                                                 d="M11.7334 20.4663C6.7677 20.4663 2.74219 16.4408 2.74219 11.4751C2.74219 6.50939 6.7677 2.48389 11.7334 2.48389C16.6991 2.48389 20.7246 6.50939 20.7246 11.4751C20.7246 16.4408 16.6991 20.4663 11.7334 20.4663ZM11.7334 18.6681C15.706 18.6681 18.9264 15.4477 18.9264 11.4751C18.9264 7.50254 15.706 4.28213 11.7334 4.28213C7.76084 4.28213 4.54043 7.50254 4.54043 11.4751C4.54043 15.4477 7.76084 18.6681 11.7334 18.6681ZM12.6325 11.4751H16.229V13.2734H10.8343V6.9795H12.6325V11.4751Z"
                                                 fill="#141414" />
                                         </svg>
-                                        {{ $left_time }} left
+                                        left
                                     <p>
                                         <span>Bid starts from</span>
-                                        ${{ $car['minimum_price'] }}
+                                        ${{ $search['minimum_price'] }}
                                     </p>
                                     <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg" class="star">
@@ -138,12 +138,12 @@
                                     </svg>
                                 </div>
                                 <div class="car--model">
-                                    <a href="{{ route('car_single.index', $car->id) }}">{{ $car['title'] }}</a>
+                                    <a href="{{ route('car_single.index', $search->id) }}">{{ $search['title'] }}</a>
                                     <p>
-                                        {{ $car['year'] }},{{ $car['model'] }}, {{ $car['exterior_color'] }}
+                                        {{ $search['year'] }},{{ $search['model'] }}, {{ $search['exterior_color'] }}
                                     </p>
                                     <div class="card--footer">
-                                        <p>{{ $car['engine'] }},{{ $car['transmission'] }}</p>
+                                        <p>{{ $search['engine'] }},{{ $search['transmission'] }}</p>
                                         <a href="car-single.html" class="buttonv2 button">Place a Bid</a>
                                     </div>
                                 </div>
@@ -154,10 +154,7 @@
 
 
                 </div>
-            </div>
-            <span>
-                {{ $cars->links() }}
-            </span>
+
             </div>
 
         </section>
