@@ -1207,7 +1207,8 @@
                                     </form>
 
                                     <div class="delete--button">
-                                        <a href="#" class="button"> Delete Account </a>
+                                        <a href="{{ route('profile.delete', auth()->user()->id) }}" class="button"> Delete
+                                            Account </a>
                                     </div>
                                 </div>
                             </div>

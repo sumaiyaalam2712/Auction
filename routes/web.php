@@ -66,6 +66,7 @@ Route::post('/profile',[ProfileController::class,'store'])->name('profile.store'
 Route::post('/profile-email',[ProfileController::class,'emailStore'])->name('profile.email.store');
 Route::post('/profile-pic',[ProfileController::class,'picStore'])->name('profile.pic.store');
 Route::post('/profile-card',[ProfileController::class,'cardStore'])->name('profile.card.store');
+Route::get('/profile-delete/{id}',[ProfileController::class,'delete'])->name('profile.delete');
 
 
 Route::get('/write-review',[WriteReviewController::class,'index'])->name('write_review.index');

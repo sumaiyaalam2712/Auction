@@ -124,4 +124,12 @@ class ProfileController extends Controller
       return redirect()->back();
     }
 
+    public function delete($id)
+    {
+
+       $data=User::find($id);
+       $data->delete();
+       return redirect()->back();
+    }
+
 }

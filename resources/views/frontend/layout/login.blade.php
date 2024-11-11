@@ -71,7 +71,7 @@
                     </form>
                     <!-- account--reminder  -->
                     <p class="account--reminder">
-                        Don’t have an account? <a href="signup.html">Sign Up</a>
+                        Don’t have an account? <a href="{{ route('register') }}">Sign Up</a>
                     </p>
                 </div>
             </div>
