@@ -23,12 +23,17 @@ class CarSingleController extends Controller
         $count=Bid::count('bid_amount');
 
 
-        $cars=Car::all();
-        $current_time_all = Carbon::today();
-        $end_time_all = Carbon::parse($cars->end_time_all);
-        $left_time_all = $current_time_all->diff($end_time_all)->format('%d days');
+        $recents=Car::all();
+        foreach($recents as $recent){
+        $current_time_recent = Carbon::today();
+       $end_time_recent = Carbon::parse($recent->end_time);
+       $left_time_recent = $current_time_recent->diff($end_time_recent)->format('%d');
+}
 
+
+
+      $cars = Car::where('end_time', '<=', Carbon::today()->addDays(3))->get();
         $review=Review::all();
-       return view('frontend.layout.car_single',['car'=>$car,'max'=>$max,'left_time'=>$left_time,'count'=>$count,'cars'=>$cars,'reviews'=>$review]);
+       return view('frontend.layout.car_single',['car'=>$car,'max'=>$max,'left_time'=>$left_time,'count'=>$count,'cars'=>$cars,'left_time_recent'=>$left_time_recent,'reviews'=>$review]);
     }
 }
