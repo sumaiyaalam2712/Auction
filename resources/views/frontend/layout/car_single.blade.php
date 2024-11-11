@@ -98,7 +98,7 @@
                                             stroke-linejoin="round" />
                                     </svg>
                                 </div>
-                                <p>Time Left <strong>2 Days</strong></p>
+                                <p>Time Left <strong>{{ $left_time }}</strong></p>
                             </div>
                             <!-- single info  -->
                             <div class="single--info">
@@ -117,7 +117,7 @@
                                             stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </div>
-                                <p>High Bid <strong>$185,000</strong></p>
+                                <p>High Bid <strong>${{ $max }}</strong></p>
                             </div>
                             <!-- single info  -->
                             <div class="single--info">
@@ -138,7 +138,7 @@
                                             stroke-linejoin="round" />
                                     </svg>
                                 </div>
-                                <p>Total Bids <strong>07</strong></p>
+                                <p>Total Bids <strong>{{ $count }}</strong></p>
                             </div>
                             <!-- single info  -->
                             <div class="single--info">
@@ -787,85 +787,28 @@
             </div>
             <!-- credit card info  -->
             <div class="credit--card--information">
-                <form action="{{ route('card.store') }}" method="POST" class="needs-validation" novalidate>
+                <form action="{{ route('bid.store', $car->id) }}" method="POST" class="needs-validation" novalidate>
                     @csrf
-                    <h4>Credit Card Information</h4>
+                    <h4>Register to Bid</h4>
+                    <p>The last Bidding Amount was $ {{ $max }}. You are required to Bid expanding minimum 50$ of
+                        Last Bidding Amount</p>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-12">
                             <div class="input--group">
-                                <label for="cardholder_name">Card Holder Name</label>
-                                <input type="text" class="form-control" id="cardholder_name" name="cardholder_name"
+                                <label for="bid_amount">Amount You Want To Bid !!</label>
+                                <input type="text" class="form-control" id="bid_amount" name="bid_amount"
                                     placeholder="Enter your card name" required />
                                 <div class="invalid-feedback">
                                     Please enter your name.
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="input--group">
-                                <label for="card_number">Card Number</label>
-                                <input type="number" class="form-control" id="card_number" name="card_number"
-                                    placeholder="Enter your card name" required />
-                                <div class="invalid-feedback">
-                                    Please enter your card number.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="input--group">
-                                <label for="expiration">Expiration</label>
-                                <input type="date" id="expiration" class="form-control" name="expiration_date"
-                                    placeholder="MM/YY" required />
-                                <div class="invalid-feedback">
-                                    Please enter the expiration date.
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <div class="input--group">
-                                <label for="cvv">CVV</label>
-                                <input type="number" class="form-control" id="cvv" name="cvv"
-                                    placeholder="CVV" required />
-                                <div class="invalid-feedback">Please enter your CVC.</div>
-                            </div>
-                        </div>
-
-
-
-
-
-                        <div class="col-md-6">
-                            <div class="input--group">
-                                <label for="billing_address">Billing Address</label>
-                                <input type="text" class="form-control" id="billing_address" name="billing_address"
-                                    placeholder="Enter your billing address" required />
-                                <div class="invalid-feedback">
-                                    Please write your address.
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <div class="input--group">
-                                <label for="phone_number">Phone</label>
-                                <input type="text" class="form-control" id="phone_number" name="phone_number"
-                                    placeholder="Enter your phone number" required />
-                                <div class="invalid-feedback">
-                                    Please give your number.
-                                </div>
-                            </div>
-                        </div>
-
 
 
                         <div class="col-12">
 
                             <button type="submit" class="button w-100 mt_45">
-                                Register to Bid
+                                Fix the Amount to Bid
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16"
                                     viewBox="0 0 18 16" fill="none">
                                     <path fill-rule="evenodd" clip-rule="evenodd"

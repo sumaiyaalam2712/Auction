@@ -26,7 +26,7 @@
         <section class="our--auction--area">
             <div class="container">
                 <!-- section title  -->
-                <div class="section--title mb_30 text-center">
+                <div class="text-center section--title mb_30">
                     <h3 class="sec--title" data-aos="fade-in" data-aos-duration="2000">
                         Our Auctions
                     </h3>
@@ -65,7 +65,7 @@
         <section class="how--works--area">
             <div class="container">
                 <!-- section title  -->
-                <div class="section--title mb_60 text-center">
+                <div class="text-center section--title mb_60">
                     <h3 class="sec--title" data-aos="fade-in" data-aos-duration="1500">
                         How It Works
                     </h3>
@@ -146,7 +146,7 @@
         <section class="advantage--area">
             <div class="container">
                 <!-- section title  -->
-                <div class="section--title mb_30 text-center">
+                <div class="text-center section--title mb_30">
                     <h3 class="sec--title" data-aos="fade-in" data-aos-duration="1500">
                         Many Advantages With<br />
                         Saudi Cars Hub!
@@ -298,7 +298,8 @@
                                     </p>
                                     <div class="card--footer">
                                         <p>Fort Lauderdale, FL 33315</p>
-                                        <a href="#" class="buttonv2 button">Place a Bid</a>
+                                        <a href="#" class="buttonv2 button">Place
+                                            a Bid</a>
                                     </div>
                                 </div>
                             </div>
@@ -442,7 +443,7 @@
         <section class="cars--and--bids--area" style="background-image: url(./assets/images/car-and-bids-bg.png)">
             <div class="container">
                 <!-- section--title  -->
-                <div class="section--title text-center" data-aos="fade-in" data-aos-duration="1500"
+                <div class="text-center section--title" data-aos="fade-in" data-aos-duration="1500"
                     data-aos-delay="100">
                     <h3 class="sec--title">Why Cars & Bids?</h3>
                 </div>
@@ -500,7 +501,7 @@
         <section class="faq--area">
             <div class="container">
                 <!-- section title  -->
-                <div class="section--title mb_40 text-center" data-aos="fade-in" data-aos-duration="1500">
+                <div class="text-center section--title mb_40" data-aos="fade-in" data-aos-duration="1500">
                     <h3 class="sec--title">Frequently Asked Questions</h3>
                     <p>
                         Find answers to commonly asked questions about our platform in our

@@ -101,16 +101,16 @@ class ProfileController extends Controller
 
         $request->validate(
             [
-               'cardholder_name'=>'required',
+              'cardholder_name'=>'required',
                'card_number'=>'required',
-               'expiration_date'=>'required|date',
+             'expiration_date'=>'required',
                'cvv'=>'required',
                'phone_number'=>'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
                 'billing_address'=>'required'
-            ],
+          ],
             ['required'=>'You must fill the field with VALID information']
             );
-      $data=Card::find(auth()->user()->id);
+            $data = Card::where('user_id', auth()->user()->id)->first();
       $data->user_id=auth()->user()->id;
       $data->cardholder_name=$request->cardholder_name;
       $data->card_number=$request->card_number;

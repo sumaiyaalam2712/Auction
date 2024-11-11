@@ -41,6 +41,13 @@
                 </select>
                 <a href="{{ route('sell_car.index') }}" class="buttonv2 button">Sell a Car</a>
                 <a href="{{ route('login.index') }}" class="button login-btn">Sign In</a>
+                <a href="{{ route('logout') }}" class="hum_log-out_btn"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="fa-light fa-power-off"></i> Log Out
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
                 <!-- menu toggler -->
                 <div class="hamburger-menu">
                     <span class="line-top"></span>

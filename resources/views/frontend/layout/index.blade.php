@@ -278,7 +278,8 @@
                                         </p>
                                         <div class="card--footer">
                                             <p>{{ $car['engine'] }},{{ $car['transmission'] }}</p>
-                                            <a href="car-single.html" class="buttonv2 button">Place a Bid</a>
+                                            <a href="{{ route('car_single.index', $car->id) }}"
+                                                class="buttonv2 button">Place a Bid</a>
                                         </div>
                                     </div>
                                 </div>

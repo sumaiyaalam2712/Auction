@@ -1124,8 +1124,8 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <form action="{{ route('card.store') }}" method="POST" class="needs-validation"
-                                        novalidate>
+                                    <form action="{{ route('profile.card.store') }}" method="POST"
+                                        class="needs-validation" novalidate>
                                         @csrf
                                         <!-- credit--card info  -->
                                         <div class="credit--card--info mt_35">

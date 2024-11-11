@@ -17,6 +17,7 @@ use App\Http\Controllers\Web\Frontend\WriteReviewController;
 use App\Http\Controllers\Web\Backend\DashboardController;
 use App\Http\Controllers\Web\Backend\UserController;
 use App\Http\Controllers\Web\Backend\SearchController;
+use App\Http\Controllers\Web\Backend\BidController;
 
 
 /*
@@ -77,6 +78,7 @@ Route::post('/write-review',[WriteReviewController::class,'store'])->name('write
 
 Route::post('/sell-car',[CarController::class,'store'])->name('car.store');
 Route::post('/card-information',[CardInformationController::class,'store'])->name('card.store');
+Route::post('/bid/{id}',[BidController::class,'store'])->name('bid.store');
 
 
 
