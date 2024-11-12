@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Review;
 use App\Models\Car;
+use App\Models\User;
 use Carbon\Carbon;
 
 class AuctionController extends Controller
@@ -18,7 +19,7 @@ class AuctionController extends Controller
             $end_time = Carbon::parse($car->end_time);
             $left_time = $current_time->diff($end_time)->format('%d days');
         }
-        $review = Review::all();
+        $review = User::with('reviews')->get();
         return view('frontend.layout.auction', ['cars' => $cars,'left_time' => $left_time,'reviews' => $review]);
     }
 

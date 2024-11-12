@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Review;
 use App\Models\Car;
 use Carbon\Carbon;
+use App\Models\User;
 
 class BidderProfileController extends Controller
 {
@@ -34,7 +35,7 @@ class BidderProfileController extends Controller
                 'left_time' => $left_time
             ];
         }
-        $review=Review::all();
+        $review = User::with('reviews')->get();
           return view('frontend.layout.bidder_profile',['reviews'=>$review,'cars'=>$cars,'count'=>$counts,'left_times' => $left_times]);
     }
 }

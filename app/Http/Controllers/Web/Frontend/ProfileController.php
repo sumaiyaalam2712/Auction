@@ -14,7 +14,7 @@ class ProfileController extends Controller
     public function index()
     {
 
-        $review=Review::all();
+        $review = User::with('reviews')->get();
           return view('frontend.layout.profile',['reviews'=>$review]);
     }
 

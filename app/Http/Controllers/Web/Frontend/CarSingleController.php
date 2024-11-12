@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Review;
 use App\Models\Car;
 use App\Models\Bid;
+use App\Models\User;
 use Carbon\Carbon;
 
 class CarSingleController extends Controller
@@ -33,7 +34,7 @@ class CarSingleController extends Controller
 
 
       $cars = Car::where('end_time', '<=', Carbon::today()->addDays(3))->get();
-        $review=Review::all();
+      $review = User::with('reviews')->get();
        return view('frontend.layout.car_single',['car'=>$car,'max'=>$max,'left_time'=>$left_time,'count'=>$count,'cars'=>$cars,'left_time_recent'=>$left_time_recent,'reviews'=>$review]);
     }
 }
