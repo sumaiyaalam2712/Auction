@@ -182,6 +182,7 @@
             <div class="container">
                 <!-- section title  -->
                 <div class="text-center section--title" data-aos="fade-in" data-aos-duration="1500">
+
                     <p>How It Works</p>
                     <h3 class="sec--title">
                         Here's how we make selling, buying, or finalizing the car sale
@@ -190,6 +191,7 @@
                 </div>
                 <div class="row">
                     <div class="tab--area">
+
                         <!-- nav link  -->
                         <ul class="mb-3 nav nav-pills" id="pills-tab" role="tablist" data-aos="fade-in"
                             data-aos-duration="1500">
@@ -215,10 +217,13 @@
                                 </button>
                             </li>
                         </ul>
+
                         <!-- tab content  -->
+
                         <div class="tab-content mt_65" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-car-buy" role="tabpanel"
                                 aria-labelledby="pills-car-buy-tab" tabindex="0">
+
                                 <div class="row">
                                     <div class="col-lg-5 mt_30" data-aos="fade-up" data-aos-duration="1000">
                                         <!-- img--area   -->
@@ -228,8 +233,9 @@
                                     </div>
                                     <div class="col-lg-7 mt_30">
                                         <div class="car--contents">
+
                                             <h3 data-aos="fade-up" data-aos-duration="1000">
-                                                Buying a Car
+                                                Buying A Car
                                             </h3>
                                             <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                                                 Once you’ve found a car you’re interested in, here are
@@ -237,153 +243,24 @@
                                                 any luck, win the auction!
                                             </p>
                                             <!-- register  -->
-                                            <div class="register mt_20" data-aos="fade-up" data-aos-duration="1000">
-                                                <h4>1. Register to Bid</h4>
-                                                <p>
-                                                    To contact the seller directly and place bids, you
-                                                    must first Register to Bid with a valid credit card
-                                                    and phone number. Winning bidders pay Cars & Bids
-                                                    a 4.5% buyer’s fee on top of the winning bid amount
-                                                    (minimum of $225, maximum of $4,500).
-                                                </p>
-                                            </div>
-                                            <!-- diligance  -->
-                                            <div class="daligance mt_20" data-aos="fade-up" data-aos-duration="1000">
-                                                <h4>2. Perform Due Diligence</h4>
-                                                <p>
-                                                    While we’ve tried to make buying a car online as
-                                                    safe and easy as possible, it’s ultimately your
-                                                    responsibility to perform your own due diligence and
-                                                    make sure that the car you’re considering is right
-                                                    for you prior to placing a bid.
-                                                </p>
-                                                <ul>
-                                                    <li>
-                                                        Review the listing thoroughly, including known
-                                                        flaws, the vehicle history report, the vehicle
-                                                        inspection report (if applicable), recent
-                                                        maintenance, photos, etc.
-                                                    </li>
-                                                    <li>
-                                                        Ask the seller – via comments, Seller Q&A, or the
-                                                        “Contact” feature – any questions that you may
-                                                        have about the vehicle.
-                                                    </li>
-                                                    <li>
-                                                        Arrange to inspect the vehicle in person, or work
-                                                        with the seller to schedule a detailed
-                                                        pre-purchase inspection (“PPI”) at a reputable
-                                                        shop in their area (at your cost).
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- financing  -->
-                                            <div class="financing mt_20" data-aos="fade-up" data-aos-duration="1000">
-                                                <h4>3. Arrange Financing and Logistics</h4>
-                                                <p>
-                                                    To ensure a smooth transaction, you should have the
-                                                    following organized prior to placing a bid.
-                                                </p>
-                                                <ul>
-                                                    <li>
-                                                        To facilitate your purchase, we’ve teamed up with
-                                                        LightStream to make financing easy and fast for
-                                                        users with good to excellent credit. You can check
-                                                        out rates and payments - and apply for a loan -
-                                                        directly from each auction! LightStream financing
-                                                        is not tied to a specific vehicle, and you can get
-                                                        your loan funded - and money deposited into your
-                                                        account - as soon as the same day you apply.**
-                                                    </li>
-                                                    <li>
-                                                        As a reminder, if you plan to finance this
-                                                        purchase, work with your lender to get your
-                                                        financing approved ahead of time - and keep in
-                                                        mind that some lenders may require specific
-                                                        vehicle information and may have year and mileage
-                                                        restrictions.
-                                                    </li>
-                                                    <li>
-                                                        Discuss transportation and storage timelines (if
-                                                        applicable) with the seller, and if you’ll be
-                                                        shipping the vehicle, get a quick and easy
-                                                        shipping quote directly on the auction page before
-                                                        bidding.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- Bid  -->
-                                            <div class="bid mt_20" data-aos="fade-up" data-aos-duration="1000">
-                                                <h4>4. Bid</h4>
-                                                <p>
-                                                    We’ve made bidding easy, and we’ve explained it in a
-                                                    short video tutorial:
-                                                </p>
-                                                <!-- video popup -->
-                                                <div class="video--popup"
-                                                    style="
-                            background-image: url(./assets/images/play-banner.png);
-                          ">
-                                                    <a href="https://www.youtube.com/watch?v=dqrn8BaY9-s">
-                                                        <svg width="88" height="88" viewBox="0 0 88 88"
-                                                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <circle cx="44" cy="44" r="44"
-                                                                fill="#FD7F54" />
-                                                            <path
-                                                                d="M64 41.6906C65.7778 42.717 65.7778 45.283 64 46.3094L36 62.4752C34.2222 63.5016 32 62.2186 32 60.1658V27.8342C32 25.7814 34.2222 24.4984 36 25.5248L64 41.6906Z"
-                                                                fill="#FAF9F6" />
-                                                        </svg>
-                                                    </a>
+                                            @foreach ($buying_car as $buy)
+                                                <div class="register mt_20" data-aos="fade-up" data-aos-duration="1000">
+                                                    <h4>{{ $loop->iteration }}.{{ $buy['sub_title'] }}</h4>
+                                                    <p>
+                                                        {!! $buy['description'] !!}
+                                                    </p>
                                                 </div>
-                                                <ul>
-                                                    <li>
-                                                        When you bid, we place a hold on your credit card
-                                                        for the buyer's fee – if you win, your card will
-                                                        be charged and you will pay the seller directly
-                                                        for the vehicle, otherwise, the hold will be
-                                                        released at the auction’s end.
-                                                    </li>
-                                                    <li>
-                                                        Bids are binding, so only bid if you fully intend
-                                                        to purchase the car and you have performed the
-                                                        requisite due diligence, because you might end up
-                                                        as the high bidder and there are no refunds.
-                                                    </li>
-                                                    <li>
-                                                        To ensure the bidding process is fair for
-                                                        everyone, bids placed within the final minute of
-                                                        the auction will reset the auction’s time
-                                                        remaining back to 1 minute – giving others the
-                                                        opportunity to bid.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- auction  -->
-                                            <div class="auction mt_30" data-aos="fade-up" data-aos-duration="1000">
-                                                <h4>5. Win the Auction</h4>
-                                                <p>
-                                                    To buy a car on Cars & Bids, you must win the
-                                                    auction by ultimately being the highest bidder –
-                                                    and, if the auction has a “Reserve,” by placing a
-                                                    bid that meets or exceeds the seller’s hidden
-                                                    “Reserve” price. If the auction has “No Reserve,”
-                                                    then the highest bidder wins it regardless of the
-                                                    amount they bid.
-                                                </p>
-                                                <p>
-                                                    After the auction closes, we’ll provide you with a
-                                                    step-by-step checklist to complete your purchase.
-                                                    You’ll also receive the seller’s contact information
-                                                    (and vice-versa) in order to finalize the details
-                                                    and logistics of the transaction. Buyers are
-                                                    expected to pay for the vehicle in-full within a
-                                                    week of the auction closing.  <br /><a href="#">Learn more about
-                                                        Finalizing the Sale</a>.
-                                                </p>
-                                            </div>
+                                            @endforeach
+                                            <!-- diligance  -->
+
+                                            <!-- financing  -->
+
+                                            <!-- Bid  -->
+
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                             <div class="tab-pane fade" id="pills-sell" role="tabpanel" aria-labelledby="pills-sell-tab"
                                 tabindex="0">
@@ -402,141 +279,17 @@
                                                 enthusiast car – and we’ve made the process easy.
                                             </p>
                                             <!-- submit car  -->
-                                            <div class="submit--car mt_20">
-                                                <h4>1. Submit Your Car</h4>
-                                                <p>
-                                                    It’s free to <a href="#">submit your car</a>. We
-                                                    simply ask you for a few details – including the
-                                                    VIN, some photos, and a brief description of the
-                                                    car. You can also choose whether you want to set a
-                                                    reserve price, or if you want your vehicle to be
-                                                    sold with no reserve. A reserve price is a minimum
-                                                    value you’ll accept in order to sell your car – and
-                                                    while a reserve auction may seem like an appealing
-                                                    choice, we’ve found that vehicles offered with no
-                                                    reserve get more bids, more interest, and more
-                                                    attention.
-                                                </p>
-                                                <p>
-                                                    If you choose a reserve auction, we’ll ask you to
-                                                    suggest a reserve price – but, based on market
-                                                    conditions, we may ask for a lower one before
-                                                    accepting your car. Keep in mind that all of our
-                                                    auctions start from $0, regardless of whether or not
-                                                    they have a reserve.
-                                                </p>
-                                                <p>
-                                                    Our experienced auction team will review your
-                                                    submission and may ask you some follow-up questions.
-                                                    We will do our best to give you an answer within a
-                                                    business day. Not every car is right for Cars &
-                                                    Bids, but we always appreciate you taking the time
-                                                    to submit your car to us!
-                                                </p>
-                                            </div>
+                                            @foreach ($selling_car as $sell)
+                                                <div class="submit--car mt_20">
+                                                    <h4>{{ $loop->iteration }}.{{ $sell['sub_title'] }}</h4>
+                                                    <p>
+                                                        {!! $sell['description'] !!}
+                                                    </p>
+
+                                                </div>
+                                            @endforeach
                                             <!-- Prepare Your Listing  -->
-                                            <div class="prepare--car mt_20">
-                                                <h4>2. Prepare Your Listing</h4>
-                                                <p>
-                                                    Once your submission is accepted, we’ll need some
-                                                    additional information from you – like detailed
-                                                    photos, service and ownership history, etc. Don’t
-                                                    worry – we’re here to help you throughout the
-                                                    process!
-                                                </p>
-                                                <ul>
-                                                    <li>
-                                                        Before you can sell on Cars & Bids, your car must
-                                                        not be listed for sale elsewhere – meaning you’ll
-                                                        have to remove any other advertisement for your
-                                                        car and you cannot accept offers outside of the
-                                                        auction.
-                                                    </li>
-                                                    <li>
-                                                        Take excellent photos of your car to get top
-                                                        dollar – <a href="#">hire a professional
-                                                            photographer</a> or <a href="#">review our photo
-                                                            guide</a> before
-                                                        snapping your own pics.
-                                                    </li>
-                                                    <li>
-                                                        Film a quick video <a href="#">walk-around and
-                                                            cold-start</a> – just shoot them on your phone in landscape
-                                                        mode and upload to YouTube or Vimeo.
-                                                    </li>
-                                                    <li>
-                                                        Have your car inspected to get top dollar – you
-                                                        can order your inspection after your submission is
-                                                        accepted, and once you approve your inspection
-                                                        report we can include it with your listing.
-                                                    </li>
-                                                    <li>
-                                                        Review the process for transferring vehicle titles
-                                                        in your state – and, if you have a loan on the
-                                                        vehicle, review the process and timeline for
-                                                        paying it off with your lender.
-                                                    </li>
-                                                    <li>
-                                                        Get ready for a thrilling 7-day auction and be
-                                                        prepared to engage with the community and answer
-                                                        questions as they arise.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!--  Finalize Your Auction  -->
-                                            <div class="finalise mt_20">
-                                                <h4>3. Finalize Your Auction</h4>
-                                                <p>
-                                                    Once you’ve provided us with all of the necessary
-                                                    information and photos, we’ll create a draft of your
-                                                    listing for you to approve. Once you’ve reviewed and
-                                                    approved it, we’ll work with you to schedule your
-                                                    auction, and it will go live shortly thereafter!
-                                                </p>
-                                            </div>
-                                            <!-- Participate in the Auction  -->
-                                            <div class="participate mt_20">
-                                                <h4>4. Participate in the Auction</h4>
-                                                <ul>
-                                                    <li>
-                                                        Timely and positive seller participation in the
-                                                        auction – responding to comments and questions,
-                                                        providing additional pictures or videos as needed,
-                                                        etc – is crucial to a successful auction. Good
-                                                        seller participation will result in additional
-                                                        interest, more bids, and a higher final sale
-                                                        price.
-                                                    </li>
-                                                    <li>
-                                                        Interested bidders may contact you directly via
-                                                        email using the “Contact Seller” feature, allowing
-                                                        them to schedule test drives, pre-purchase
-                                                        inspections (at their cost), and ask additional
-                                                        questions.
-                                                    </li>
-                                                    <li>
-                                                        Enjoy the final minutes – many of our auctions end
-                                                        with thrilling bidding wars, so get ready!
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!--  Auction End  -->
-                                            <div class="auction mt_30">
-                                                <h4>5. Auction End</h4>
-                                                <p>
-                                                    After the auction closes, we’ll provide you with a
-                                                    step-by-step checklist to complete your sale. You’ll
-                                                    also receive the buyer’s contact information (and
-                                                    vice-versa) in order to finalize the details and
-                                                    logistics of the transaction. <a href="#">Learn more about
-                                                        Finalizing the Sale.</a>
-                                                </p>
-                                                <p>
-                                                    If your auction had a reserve and it was not met,
-                                                    we’ll reach out to you and the highest bidder to see
-                                                    if we can help make a deal!
-                                                </p>
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -564,93 +317,15 @@
                                                 sale – and remember, we’re here to help!
                                             </p>
                                             <!-- submit car  -->
-                                            <div class="submit--car mt_20">
-                                                <h4>1. Submit Your Car</h4>
-                                                <p>
-                                                    It’s free to <a href="#">submit your car</a>. We
-                                                    simply ask you for a few details – including the
-                                                    VIN, some photos, and a brief description of the
-                                                    car. You can also choose whether you want to set a
-                                                    reserve price, or if you want your vehicle to be
-                                                    sold with no reserve. A reserve price is a minimum
-                                                    value you’ll accept in order to sell your car – and
-                                                    while a reserve auction may seem like an appealing
-                                                    choice, we’ve found that vehicles offered with no
-                                                    reserve get more bids, more interest, and more
-                                                    attention.
-                                                </p>
-                                                <p>
-                                                    If you choose a reserve auction, we’ll ask you to
-                                                    suggest a reserve price – but, based on market
-                                                    conditions, we may ask for a lower one before
-                                                    accepting your car. Keep in mind that all of our
-                                                    auctions start from $0, regardless of whether or not
-                                                    they have a reserve.
-                                                </p>
-                                                <p>
-                                                    Our experienced auction team will review your
-                                                    submission and may ask you some follow-up questions.
-                                                    We will do our best to give you an answer within a
-                                                    business day. Not every car is right for Cars &
-                                                    Bids, but we always appreciate you taking the time
-                                                    to submit your car to us!
-                                                </p>
-                                            </div>
-                                            <!-- Payment & Documentation  -->
-                                            <div class="payment mt_20">
-                                                <h4>2. Payment & Documentation</h4>
-                                                <ul>
-                                                    <li>
-                                                        Buyers are expected to pay for the vehicle in-full
-                                                        within a week of the auction closing.
-                                                    </li>
-                                                    <li>
-                                                        If there’s an outstanding loan on the vehicle, the
-                                                        buyer and seller should discuss how it will be
-                                                        paid off and the specific next steps, so that the
-                                                        buyer can complete the transaction safely.
-                                                    </li>
-                                                    <li>
-                                                        An accurate Bill of Sale should be created,
-                                                        including the terms of the transaction, to be
-                                                        signed by both parties; we recommend checking with
-                                                        your state DMV for Bill of Sale templates and
-                                                        requirements.
-                                                    </li>
-                                                    <li>
-                                                        We recommend wire transfers or cashier’s checks
-                                                        for payment, but there are many possible options –
-                                                        including meeting at the buyer’s/seller’s bank to
-                                                        draft up a cashier's check, withdrawing the funds
-                                                        directly, or completing an electronic money
-                                                        transfer.
-                                                    </li>
-                                                    <li>
-                                                        Arrange for the car to be picked up and finalize
-                                                        the transaction. If the buyer plans to ship the
-                                                        vehicle, they can book shipping directly through
-                                                        the winner’s page or by contacting our shipping
-                                                        team at <a
-                                                            href="mailto:shipping@carsandbids.com">shipping@carsandbids.com</a> or <a
-                                                            href="tel:9789552355">(978) 955-2355</a>.
-                                                        The vehicle and title should only be released once
-                                                        the seller has the full payment in hand. If the
-                                                        transaction is happening remotely, the seller
-                                                        should mail the signed-over title to the buyer via
-                                                        courier service with a tracking number once
-                                                        payment is in hand.
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!--  Share your Success Story  -->
-                                            <div class="auction mt_30">
-                                                <h4>5. Share your Success Story</h4>
-                                                <p>
-                                                    <a href="#">Email the Cars & Bids team</a> a photo
-                                                    of the handoff to share your success story – we’d
-                                                    love to hear about it!
-                                                </p>
-                                            </div>
+                                            @foreach ($finalizing_sale as $finalizing)
+                                                <div class="submit--car mt_20">
+                                                    <h4>{{ $loop->iteration }}.{{ $finalizingl['sub_title'] }}</h4>
+                                                    <p>
+                                                        {!! $finalizingl['description'] !!}
+                                                    </p>
+
+                                                </div>
+                                            @endforeach
                                         </div>
                                     </div>
                                 </div>

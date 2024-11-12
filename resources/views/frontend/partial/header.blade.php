@@ -2,7 +2,7 @@
     <div class="container">
         <div class="custom-row">
             <!-- logo  -->
-            <a href="index.html" class="logo">
+            <a href="{{ route('home.index') }}" class="logo">
                 <img src="./assets/images/logo.svg" alt="logo" />
             </a>
             <!-- menu & search -->

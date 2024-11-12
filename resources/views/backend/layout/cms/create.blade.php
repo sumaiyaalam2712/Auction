@@ -1,13 +1,11 @@
 @extends('backend.app')
 @section('content')
-    ->
-
     <!-- Content wrapper -->
     <div class="content-wrapper">
         <!-- Content -->
 
         <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Forms/</span> Horizontal Layouts
+            <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">CMS</span> Create CMS for your website
             </h4>
 
             <!-- Basic Layout & Basic with Icons -->
@@ -20,52 +18,101 @@
                             <small class="text-muted float-end">Content Management System</small>
                         </div>
                         <div class="card-body">
-                            <form>
+                            <form action="{{ route('cms.store') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
                                 <div class="row mb-3">
-                                    <label class="col-sm-2 col-form-label" for="basic-default-name">Name</label>
+                                    <label class="col-sm-2 col-form-label" for="basic-default-name">Page</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="basic-default-name"
+                                        <input type="text" class="form-control" id="basic-default-name" name="page"
                                             placeholder="John Doe" />
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="col-sm-2 col-form-label" for="basic-default-company">Company</label>
+                                    <label class="col-sm-2 col-form-label" for="basic-default-company">Section</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="basic-default-company"
-                                            placeholder="ACME Inc." />
+                                        <select class="Section--select" name="section">
+                                            <option selected disabled>Section</option>
+                                            <option value="How it Works">How it Works</option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                            <option value=""></option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="col-sm-2 col-form-label" for="basic-default-email">Email</label>
+                                    <label class="col-sm-2 col-form-label" for="basic-default-email">Title</label>
                                     <div class="col-sm-10">
-                                        <div class="input-group input-group-merge">
-                                            <input type="text" id="basic-default-email" class="form-control"
-                                                placeholder="john.doe" aria-label="john.doe"
-                                                aria-describedby="basic-default-email2" />
-                                            <span class="input-group-text" id="basic-default-email2">@example.com</span>
-                                        </div>
-                                        <div class="form-text">You can use letters, numbers & periods</div>
+
+                                        <select class="Title--select" name="title">
+                                            <option selected disabled>Title</option>
+                                            <option value="Selling a car">Selling a car</option>
+                                            <option value="Buying a car">Buying a car</option>
+                                            <option value="Finalizing a sell">Finalizing the sale</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label" for="basic-default-phone">Sub Title
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <input type="text" id="basic-default-phone" name="sub_title"
+                                            class="form-control phone-mask" placeholder="658 799 8941"
+                                            aria-label="658 799 8941" aria-describedby="basic-default-phone" />
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label" for="basic-default-phone">Image
+                                    </label>
+                                    <div class="col-sm-10">
+                                        <input type="file" id="basic-default-phone" name="image"
+                                            class="form-control phone-mask" placeholder="658 799 8941"
+                                            aria-label="658 799 8941" aria-describedby="basic-default-phone" />
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="col-sm-2 col-form-label" for="basic-default-phone">Phone
-                                        No</label>
+                                    <label class="col-sm-2 col-form-label" for="basic-default-message">Description</label>
                                     <div class="col-sm-10">
-                                        <input type="text" id="basic-default-phone" class="form-control phone-mask"
-                                            placeholder="658 799 8941" aria-label="658 799 8941"
-                                            aria-describedby="basic-default-phone" />
+                                        <textarea id="description" name="description" class="form-control form-control-lg"
+                                            placeholder="Hi, Do you have a moment to talk Joe?" aria-label="Hi, Do you have a moment to talk Joe?"
+                                            aria-describedby="basic-icon-default-message2"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label" for="basic-default-name">Href</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="basic-default-name" name="href"
+                                            placeholder="John Doe" />
                                     </div>
                                 </div>
                                 <div class="row mb-3">
-                                    <label class="col-sm-2 col-form-label" for="basic-default-message">Message</label>
+                                    <label class="col-sm-2 col-form-label" for="basic-default-name">Email</label>
                                     <div class="col-sm-10">
-                                        <textarea id="basic-default-message" class="form-control" placeholder="Hi, Do you have a moment to talk Joe?"
-                                            aria-label="Hi, Do you have a moment to talk Joe?" aria-describedby="basic-icon-default-message2"></textarea>
+                                        <input type="email" class="form-control" id="basic-default-name" name="email"
+                                            placeholder="John Doe" />
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label" for="basic-default-name">Phone</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="basic-default-name" name="phone"
+                                            placeholder="John Doe" />
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label class="col-sm-2 col-form-label" for="basic-default-name">Copyright</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="basic-default-name"
+                                            name="copyright" placeholder="John Doe" />
                                     </div>
                                 </div>
                                 <div class="row justify-content-end">
                                     <div class="col-sm-10">
-                                        <button type="submit" class="btn btn-primary">Send</button>
+                                        <button type="submit" class="btn btn-primary">SAVE</button>
                                     </div>
                                 </div>
                             </form>
@@ -77,4 +124,13 @@
             </div>
         </div>
         <!-- / Content -->
+
+        @push('scripts')
+            <script>
+                ClassicEditor.create(document.querySelector('#description'))
+                    .catch(error => {
+                        console.error(error);
+                    });
+            </script>
+        @endpush
     @endsection

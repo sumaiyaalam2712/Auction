@@ -34,7 +34,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
 
-
+    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
     <!-- Core CSS -->
 
     @include('backend.partial.css')
@@ -197,5 +197,6 @@
 
     <!-- Core JS -->
 @include('backend.partial.js')
+
   </body>
 </html>
