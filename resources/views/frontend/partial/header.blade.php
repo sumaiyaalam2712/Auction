@@ -16,6 +16,12 @@
                     <li>
                         <a href="{{ route('car_bid.index') }}">What’s Cars & Bids ?</a>
                     </li>
+                    <li>
+                        <a href="{{ route('bidder_profile.index') }}">Bidder Profile</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('profile.index') }}">Profile</a>
+                    </li>
 
                     <li class="d-none mobile--login--btn">
                         <a href="{{ route('login.index') }}">Sign in</a>

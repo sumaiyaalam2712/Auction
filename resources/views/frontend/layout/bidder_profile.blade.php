@@ -65,7 +65,12 @@
                                                         d="M11.7334 20.4663C6.7677 20.4663 2.74219 16.4408 2.74219 11.4751C2.74219 6.50939 6.7677 2.48389 11.7334 2.48389C16.6991 2.48389 20.7246 6.50939 20.7246 11.4751C20.7246 16.4408 16.6991 20.4663 11.7334 20.4663ZM11.7334 18.6681C15.706 18.6681 18.9264 15.4477 18.9264 11.4751C18.9264 7.50254 15.706 4.28213 11.7334 4.28213C7.76084 4.28213 4.54043 7.50254 4.54043 11.4751C4.54043 15.4477 7.76084 18.6681 11.7334 18.6681ZM12.6325 11.4751H16.229V13.2734H10.8343V6.9795H12.6325V11.4751Z"
                                                         fill="#141414" />
                                                 </svg>
-                                                2 day left
+                                                @foreach ($left_times as $left_time)
+                                                    @if ($left_time['car_id'] == $car->id)
+                                                        {{ $left_time['left_time'] }}
+                                                    @endif
+                                                @endforeach
+                                                left
                                             </p>
                                             <p>
                                                 <span>Bid</span>
@@ -83,7 +88,7 @@
                                             <a href="{{ route('car_single.index', $car->id) }}">{{ $car['year'] }}
                                                 {{ $car['title'] }}</a>
 
-                                            <p>{{ $car['brand'] }},{{ $car['model'] }}, {{ $car['exterior_color'] }}</p>
+                                            <p>{{ $car['year'] }},{{ $car['model'] }}, {{ $car['exterior_color'] }}</p>
                                             <div class="card--footer">
 
                                                 <p>{{ $car['engine'] }},{{ $car['transmission'] }}</p>
@@ -103,7 +108,7 @@
                 <!-- bid--history -->
                 <div class="bid--history mt_60">
                     <h4 data-aos="fade-up" data-aos-duration="1000">
-                        Bid History <span>(Bid on 2 cars, 1 win)</span>
+                        Bid History <span>(Bid on {{ $count }} cars, 1 win)</span>
                     </h4>
                     <div class="row">
                         <div class="col-xxl-3 col-lg-4 col-md-6 mt_20" data-aos="fade-up" data-aos-duration="1000"
@@ -123,7 +128,11 @@
                                                         d="M11.7334 20.4663C6.7677 20.4663 2.74219 16.4408 2.74219 11.4751C2.74219 6.50939 6.7677 2.48389 11.7334 2.48389C16.6991 2.48389 20.7246 6.50939 20.7246 11.4751C20.7246 16.4408 16.6991 20.4663 11.7334 20.4663ZM11.7334 18.6681C15.706 18.6681 18.9264 15.4477 18.9264 11.4751C18.9264 7.50254 15.706 4.28213 11.7334 4.28213C7.76084 4.28213 4.54043 7.50254 4.54043 11.4751C4.54043 15.4477 7.76084 18.6681 11.7334 18.6681ZM12.6325 11.4751H16.229V13.2734H10.8343V6.9795H12.6325V11.4751Z"
                                                         fill="#141414" />
                                                 </svg>
-                                                {{ $left_time }} left
+                                                @foreach ($left_times as $left_time)
+                                                    @if ($left_time['car_id'] == $car->id)
+                                                        {{ $left_time['left_time'] }}
+                                                    @endif
+                                                @endforeach left
                                             <p>
                                                 <span>Bid starts from</span>
                                                 ${{ $car['minimum_price'] }}
@@ -152,9 +161,7 @@
 
                         </div>
                     </div>
-                    <span>
-                        {{ $cars->links() }}
-                    </span>
+
 
                 </div>
                 <!-- auction--comments  -->
@@ -176,7 +183,12 @@
                                                 d="M11.7334 19.9131C6.7677 19.9131 2.74219 15.8876 2.74219 10.9219C2.74219 5.95617 6.7677 1.93066 11.7334 1.93066C16.6991 1.93066 20.7246 5.95617 20.7246 10.9219C20.7246 15.8876 16.6991 19.9131 11.7334 19.9131ZM11.7334 18.1149C15.706 18.1149 18.9264 14.8945 18.9264 10.9219C18.9264 6.94932 15.706 3.72891 11.7334 3.72891C7.76084 3.72891 4.54043 6.94932 4.54043 10.9219C4.54043 14.8945 7.76084 18.1149 11.7334 18.1149ZM12.6325 10.9219H16.229V12.7201H10.8343V6.42628H12.6325V10.9219Z"
                                                 fill="#141414" />
                                         </svg>
-                                        2 day left
+                                        @foreach ($left_times as $left_time)
+                                            @if ($left_time['car_id'] == $car->id)
+                                                {{ $left_time['left_time'] }}
+                                            @endif
+                                        @endforeach
+                                        left
                                     </p>
                                     <p><span>Bid:</span> $10,000</p>
                                 </div>

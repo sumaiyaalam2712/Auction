@@ -18,6 +18,8 @@ use App\Http\Controllers\Web\Backend\DashboardController;
 use App\Http\Controllers\Web\Backend\UserController;
 use App\Http\Controllers\Web\Backend\SearchController;
 use App\Http\Controllers\Web\Backend\BidController;
+use App\Http\Controllers\Web\Backend\CMSController;
+
 
 
 /*
@@ -36,6 +38,11 @@ use App\Http\Controllers\Web\Backend\BidController;
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+
+
+Route::get('/dashboard/create-cms',[CMSController::class,'create'])->name('cms.create');
+Route::post('/profile',[ProfileController::class,'store'])->name('profile.store');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

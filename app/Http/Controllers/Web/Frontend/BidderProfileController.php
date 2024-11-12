@@ -14,14 +14,27 @@ class BidderProfileController extends Controller
     {
 
         $counts=Car::where('user_id',auth()->user()->id)->count('id');
-        $cars=Car::where('user_id',auth()->user()->id)->paginate(2);
-        $current_time = Carbon::today();
+        //$cars=Car::all();
 
+        //$current_time = Carbon::today();
+
+        //foreach ($cars as $car) {
+            //$end_time = Carbon::parse($car->end_time);
+            //$left_time = $current_time->diff($end_time)->format('%d days');
+        //}
+
+        $cars = Car::where('user_id',auth()->user()->id)->get();
+        $current_time = Carbon::today();
+        $left_times = [];
         foreach ($cars as $car) {
             $end_time = Carbon::parse($car->end_time);
             $left_time = $current_time->diff($end_time)->format('%d days');
+            $left_times[] = [
+                'car_id' => $car->id,
+                'left_time' => $left_time
+            ];
         }
         $review=Review::all();
-          return view('frontend.layout.bidder_profile',['reviews'=>$review,'cars'=>$cars,'count'=>$counts,'left_time' => $left_time]);
+          return view('frontend.layout.bidder_profile',['reviews'=>$review,'cars'=>$cars,'count'=>$counts,'left_times' => $left_times]);
     }
 }
