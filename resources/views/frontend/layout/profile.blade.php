@@ -22,7 +22,8 @@
                                     method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="preview--img">
-                                        <img id="image-preview" src="./assets/images/profile.png" alt="" />
+                                        <img id="image-preview" src="{{ asset('/images/' . $data['profile_pic']) }}"
+                                            alt="" />
                                     </div>
                                     <label for="profile_pic">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -45,17 +46,14 @@
                                 <!-- profile--name  -->
                                 <div class="profile--name">
                                     <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                                        Jason Mark
+                                        {{ $data['name'] }}
                                     </h1>
                                     <ul data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                        <li>Contact Number : +880 1458 564</li>
-                                        <li>Address : Sunderland, Gmail, New york</li>
+                                        <li>Contact Number : {{ $data['contact'] }}</li>
+                                        <li>Address : {{ $data['email'] }}, {{ $data['city'] }}, {{ $data['country'] }}</li>
                                     </ul>
                                     <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                                        Lorem ipsum dolor sit amet consectetur. Morbi montes
-                                        malesuada eu in enim. Viverra ultricies tellus dolor
-                                        maecenas dui sit. Amet integer consequat sed tincidunt
-                                        vitae ut. Fringilla eu augue massa nunc.
+                                        {{ $data['biography'] }}
                                     </p>
                                 </div>
                             </div>

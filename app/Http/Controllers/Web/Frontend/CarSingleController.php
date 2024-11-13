@@ -9,13 +9,14 @@ use App\Models\Car;
 use App\Models\Bid;
 use App\Models\User;
 use Carbon\Carbon;
+use App\Models\Brand;
 
 class CarSingleController extends Controller
 {
     public function index($id)
     {
 
-
+        $data=Brand::all();
         $car=Car::find($id);
         $current_time = Carbon::today();
         $end_time = Carbon::parse($car->end_time);
@@ -35,6 +36,6 @@ class CarSingleController extends Controller
 
       $cars = Car::where('end_time', '<=', Carbon::today()->addDays(3))->get();
       $review = User::with('reviews')->get();
-       return view('frontend.layout.car_single',['car'=>$car,'max'=>$max,'left_time'=>$left_time,'count'=>$count,'cars'=>$cars,'left_time_recent'=>$left_time_recent,'reviews'=>$review]);
+       return view('frontend.layout.car_single',['data'=>$data,'car'=>$car,'max'=>$max,'left_time'=>$left_time,'count'=>$count,'cars'=>$cars,'left_time_recent'=>$left_time_recent,'reviews'=>$review]);
     }
 }

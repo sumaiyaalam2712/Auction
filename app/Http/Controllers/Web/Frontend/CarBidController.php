@@ -11,10 +11,13 @@ class CarBidController extends Controller
 {
     public function index()
     {
-        $buying_car=CMS::where('title','Buying a car')->get();
-          $selling_car=CMS::where('title','Selling a car')->get();
-          $finalizing_sale=CMS::where('title','Finalizing the Sale')->get();
+        $about_us=CMS::where('title','About Us')->first();
+        $cool_car_auction=CMS::where('title','Cool Car Auctions')->first();
+        $low_fees=CMS::where('title','Low Fees')->first();
+          $buying_car=CMS::where('title','Buying a car')->first();
+          $selling_car=CMS::where('title','Selling a car')->first();
+          $finalizing_sale=CMS::where('title','Finalizing the Sale')->first();
           $review = User::with('reviews')->get();
-          return view('frontend.layout.cars_and_bids',['buying_car'=>$buying_car,'selling_car'=>$selling_car,'finalizing_sale'=>$finalizing_sale,'reviews'=>$review]);
+          return view('frontend.layout.cars_and_bids',['about'=>$about_us,'fees'=>$low_fees,'cool_car'=>$cool_car_auction,'buying'=>$buying_car,'selling'=>$selling_car,'finalizing'=>$finalizing_sale,'reviews'=>$review]);
     }
 }

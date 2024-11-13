@@ -33,7 +33,7 @@
                                         <select class="Section--select" name="section">
                                             <option selected disabled>Section</option>
                                             <option value="How it Works">How it Works</option>
-                                            <option value=""></option>
+                                            <option value="About Us">About Us</option>
                                             <option value=""></option>
                                             <option value=""></option>
                                         </select>
@@ -48,7 +48,10 @@
                                             <option value="Selling a car">Selling a car</option>
                                             <option value="Buying a car">Buying a car</option>
                                             <option value="Finalizing a sell">Finalizing the sale</option>
-                                            <option value=""></option>
+                                            <option value="Cool Car Auctions">Cool Car Auctions</option>
+                                            <option value="Low Fees">Low Fees</option>
+                                            <option value="More Information">More Information</option>
+                                            <option value="Easy to Use">Easy to Use</option>
                                         </select>
                                     </div>
 
@@ -99,8 +102,8 @@
                                 <div class="row mb-3">
                                     <label class="col-sm-2 col-form-label" for="basic-default-name">Phone</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="basic-default-name" name="phone"
-                                            placeholder="John Doe" />
+                                        <input type="text" class="form-control" id="basic-default-name"
+                                            name="phone" placeholder="John Doe" />
                                     </div>
                                 </div>
                                 <div class="row mb-3">

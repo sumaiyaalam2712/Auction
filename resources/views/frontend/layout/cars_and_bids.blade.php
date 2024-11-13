@@ -93,11 +93,9 @@
                                                 fill="#FD7F54" />
                                         </svg>
                                     </div>
-                                    <h4>Cool Car Auctions</h4>
+                                    <h4>{{ $cool_car['title'] }}</h4>
                                     <p>
-                                        Auction your modern enthusiast<br />
-                                        car — anything cool and exciting<br />
-                                        from the 1980s to the 2020s.
+                                        {!! $cool_car['description'] !!}
                                     </p>
                                 </div>
                             </div>
@@ -116,11 +114,9 @@
                                                 fill="#FD7F54" />
                                         </svg>
                                     </div>
-                                    <h4>Low Fees</h4>
+                                    <h4>{{ $fees['title'] }}</h4>
                                     <p>
-                                        Buyers pay a 4.5% commission,<br />
-                                        capped at $4,500. Sellers list for<br />
-                                        free and receive 100% of the sale.
+                                        {!! $fees['description'] !!}
                                     </p>
                                 </div>
                             </div>
@@ -235,7 +231,7 @@
                                         <div class="car--contents">
 
                                             <h3 data-aos="fade-up" data-aos-duration="1000">
-                                                Buying A Car
+                                                {{ $buying['title'] }}
                                             </h3>
                                             <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                                                 Once you’ve found a car you’re interested in, here are
@@ -243,14 +239,14 @@
                                                 any luck, win the auction!
                                             </p>
                                             <!-- register  -->
-                                            @foreach ($buying_car as $buy)
-                                                <div class="register mt_20" data-aos="fade-up" data-aos-duration="1000">
-                                                    <h4>{{ $loop->iteration }}.{{ $buy['sub_title'] }}</h4>
-                                                    <p>
-                                                        {!! $buy['description'] !!}
-                                                    </p>
-                                                </div>
-                                            @endforeach
+
+                                            <div class="register mt_20" data-aos="fade-up" data-aos-duration="1000">
+
+                                                <p>
+                                                    {!! $buying['description'] !!}
+                                                </p>
+                                            </div>
+
                                             <!-- diligance  -->
 
                                             <!-- financing  -->
@@ -273,21 +269,21 @@
                                     </div>
                                     <div class="col-lg-7 mt_30">
                                         <div class="car--contents">
-                                            <h3>Selling a Car</h3>
+                                            <h3>{{ $selling['title'] }}</h3>
                                             <p>
                                                 Cars & Bids is the best place to sell your modern
                                                 enthusiast car – and we’ve made the process easy.
                                             </p>
                                             <!-- submit car  -->
-                                            @foreach ($selling_car as $sell)
-                                                <div class="submit--car mt_20">
-                                                    <h4>{{ $loop->iteration }}.{{ $sell['sub_title'] }}</h4>
-                                                    <p>
-                                                        {!! $sell['description'] !!}
-                                                    </p>
 
-                                                </div>
-                                            @endforeach
+                                            <div class="submit--car mt_20">
+
+                                                <p>
+                                                    {!! $selling['description'] !!}
+                                                </p>
+
+                                            </div>
+
                                             <!-- Prepare Your Listing  -->
 
                                         </div>
@@ -305,7 +301,7 @@
                                     </div>
                                     <div class="col-lg-7 mt_30">
                                         <div class="car--contents">
-                                            <h3>Finalizing the Sale</h3>
+                                            <h3>{{ $finalizing['title'] }}</h3>
                                             <p>
                                                 Immediately after the auction closes we connect the
                                                 buyer and seller so they can complete their sale. They
@@ -317,15 +313,15 @@
                                                 sale – and remember, we’re here to help!
                                             </p>
                                             <!-- submit car  -->
-                                            @foreach ($finalizing_sale as $finalizing)
-                                                <div class="submit--car mt_20">
-                                                    <h4>{{ $loop->iteration }}.{{ $finalizingl['sub_title'] }}</h4>
-                                                    <p>
-                                                        {!! $finalizingl['description'] !!}
-                                                    </p>
 
-                                                </div>
-                                            @endforeach
+                                            <div class="submit--car mt_20">
+
+                                                <p>
+                                                    {!! $finalizing['description'] !!}
+                                                </p>
+
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>

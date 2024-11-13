@@ -13,9 +13,10 @@ class ProfileController extends Controller
 {
     public function index()
     {
+        $data=User::where('id',auth()->user()->id)->first();
 
         $review = User::with('reviews')->get();
-          return view('frontend.layout.profile',['reviews'=>$review]);
+          return view('frontend.layout.profile',['data'=>$data,'reviews'=>$review]);
     }
 
 
@@ -25,7 +26,6 @@ class ProfileController extends Controller
         $request->validate(
             [
                 'name'=>'required',
-                'address'=>'nullable',
                'contact'=>'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
                'biography'=>'required'
             ]
