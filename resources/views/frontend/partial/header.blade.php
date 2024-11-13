@@ -3,7 +3,7 @@
         <div class="custom-row">
             <!-- logo  -->
             <a href="{{ route('home.index') }}" class="logo">
-                <img src="./assets/images/logo.svg" alt="logo" />
+                <img src="{{ asset('/images/logo.svg') }}" alt="logo" />
             </a>
             <!-- menu & search -->
             <div class="menu--search--wrapp">
@@ -15,6 +15,9 @@
 
                     <li>
                         <a href="{{ route('car_bid.index') }}">What’s Cars & Bids ?</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('sell_car.index') }}">Sell Car</a>
                     </li>
                     <li>
                         <a href="{{ route('bidder_profile.index') }}">Bidder Profile</a>
@@ -45,7 +48,7 @@
                     <option selected value="1">English</option>
                     <option value="2">German</option>
                 </select>
-                <a href="{{ route('sell_car.index') }}" class="buttonv2 button">Sell a Car</a>
+
                 <a href="{{ route('login.index') }}" class="button login-btn">Sign In</a>
                 <a href="{{ route('logout') }}" class="hum_log-out_btn"
                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

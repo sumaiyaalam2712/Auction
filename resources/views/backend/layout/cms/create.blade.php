@@ -14,8 +14,8 @@
                 <div class="col-xxl">
                     <div class="card mb-4">
                         <div class="card-header d-flex align-items-center justify-content-between">
-                            <h5 class="mb-0">Create CMS for your website</h5>
-                            <small class="text-muted float-end">Content Management System</small>
+                            <h5 class="mb-0">Content Management System</h5>
+                            <small class="text-muted float-end"></small>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('cms.store') }}" method="POST" enctype="multipart/form-data">

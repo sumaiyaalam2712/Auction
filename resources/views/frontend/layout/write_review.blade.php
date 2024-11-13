@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Sign Up</title>
-    <!-- ==== Favicon ==== -->
-    <link rel="icon" type="image/png" href="assets/images/logo-sm.svg" />
-    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
-    <!-- ==== All Css Links ==== -->
-    @include('frontend.partial.style')
-</head>
-
-<body>
-    @include('frontend.partial.header')
+@extends('frontend.app')
+@section('content')
     <br><br><br>
     <div class="container">
         <div class="card">
@@ -78,16 +64,12 @@
         </div>
 
     </div>
-
-    @include('frontend.partial.footer')
-    @include('frontend.partial.js')
-
-    <script>
-        ClassicEditor.create(document.querySelector('#review'))
-            .catch(error => {
-                console.error(error);
-            });
-    </script>
-</body>
-
-</html>
+    @push('scripts')
+        <script>
+            ClassicEditor.create(document.querySelector('#review'))
+                .catch(error => {
+                    console.error(error);
+                });
+        </script>
+    @endpush
+@endsection

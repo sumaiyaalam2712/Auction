@@ -5,12 +5,14 @@ namespace App\Http\Controllers\Web\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Review;
+use App\Models\User;
 
 class WriteReviewController extends Controller
 {
     public function index()
     {
-          return view('frontend.layout.write_review');
+        $review = User::with('reviews')->get();
+          return view('frontend.layout.write_review',['reviews'=>$review]);
     }
 
 

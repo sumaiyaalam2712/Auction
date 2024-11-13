@@ -32,8 +32,8 @@
         <section>
             <div class="owl-carousel testimonial--carousel" data-aos="fade-left" data-aos-duration="1000"
                 data-aos-delay="100">
-                @foreach ($reviews as $review)
-                    @foreach ($review->reviews as $rev)
+                @foreach ($reviews as $user)
+                    @foreach ($user->reviews as $rev)
                         <div class="item">
                             <!-- testimonial--card  -->
                             <div class="testimonial--card">
@@ -41,9 +41,9 @@
                                     {{ $rev['review'] }}
                                 </p>
                                 <div class="client">
-                                    <img src="./assets/images/client.png" alt="" />
+                                    <img src="{{ asset('/images/' . $user->profile_pic) }}" alt="" />
                                     <div>
-                                        <p>{{ $review['name'] }}</p>
+                                        <p>{{ $user['name'] }}</p>
                                         <span>28th May 2024</span>
                                     </div>
                                 </div>

@@ -19,6 +19,7 @@ use App\Http\Controllers\Web\Backend\UserController;
 use App\Http\Controllers\Web\Backend\SearchController;
 use App\Http\Controllers\Web\Backend\BidController;
 use App\Http\Controllers\Web\Backend\CMSController;
+use App\Http\Controllers\Web\Backend\BrandController;
 
 
 
@@ -34,10 +35,8 @@ use App\Http\Controllers\Web\Backend\CMSController;
 */
 
 
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard.index')
+->middleware(['auth', 'verified'])->name('dashboard');
 
 
 
@@ -47,6 +46,8 @@ Route::get('{id}/status',[UserController::class,'status'])->name('user.status');
 
 Route::get('/dashboard/create-cms',[CMSController::class,'create'])->name('cms.create');
 Route::post('/dashboard/create-cms',[CMSController::class,'store'])->name('cms.store');
+Route::get('/dashboard/create-brand',[BrandController::class,'create'])->name('brand.create');
+Route::post('/dashboard/create-brand',[BrandController::class,'store'])->name('brand.store');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
