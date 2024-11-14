@@ -189,56 +189,7 @@
                                 </div>
                             </div>
                             <!-- filters  -->
-                            <div class="filtered--options mt_30" data-aos="fade-zoom-in" data-aos-duration="400"
-                                data-aos-delay="200" data-aos-offset="0">
-                                <p>Filters:</p>
-                                <!-- year--select  -->
-                                <select class="year--select">
-                                    <option selected disabled>Year</option>
-                                    <option>2024</option>
-                                    <option>2020</option>
-                                    <option>2021</option>
-                                    <option>2020</option>
-                                </select>
-                                <!-- Car Brand select  -->
-                                <select class="brand--select">
-                                    <option selected disabled>Car Brand</option>
-                                    <option>Audi</option>
-                                    <option>BMW</option>
-                                    <option>Chevrolet</option>
-                                    <option>Ford</option>
-                                    <option>Honda</option>
-                                    <option>Hyundai</option>
-                                    <option>Mercedes-Benz</option>
-                                    <option>Nissan</option>
-                                    <option>Toyota</option>
-                                    <option>Volkswagen</option>
-                                </select>
-                                <!-- car model select  -->
-                                <select class="car-model--select">
-                                    <option selected disabled>Car Model</option>
-                                    <option>Audi A4</option>
-                                    <option>BMW 3 Series</option>
-                                    <option>Chevrolet Cruze</option>
-                                    <option>Ford Mustang</option>
-                                    <option>Honda Civic</option>
-                                    <option>Hyundai Sonata</option>
-                                    <option>Mercedes-Benz C-Class</option>
-                                    <option>Nissan Altima</option>
-                                    <option>Toyota Camry</option>
-                                    <option>Volkswagen Golf</option>
-                                </select>
-                                <!-- price-range--select  -->
-                                <select class="price-range--select">
-                                    <option selected disabled>Price Range</option>
-                                    <option>Below $10,000</option>
-                                    <option>$10,000 - $20,000</option>
-                                    <option>$20,000 - $30,000</option>
-                                    <option>$30,000 - $40,000</option>
-                                    <option>$40,000 - $50,000</option>
-                                    <option>Above $50,000</option>
-                                </select>
-                            </div>
+                            @include('frontend.layout.search')
                         </div>
                     </div>
                     <div class="col-xxl-3 col-lg-4 col-md-6 mt_20" data-aos="fade-up" data-aos-duration="1000"

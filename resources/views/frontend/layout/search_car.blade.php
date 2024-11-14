@@ -43,60 +43,7 @@
                                 </div>
                             </div>
                             <!-- filters  -->
-                            <form action="{{ route('search.car') }}" method="POST">
-                                <div class="filtered--options mt_30" data-aos="fade-zoom-in" data-aos-duration="400"
-                                    data-aos-delay="200" data-aos-offset="0">
-                                    <p>Filters:</p>
-
-                                    <!-- year--select  -->
-                                    @csrf
-                                    <select class="year--select" name="year">
-                                        <option selected disabled>Year</option>
-                                        <option>2024</option>
-                                        <option>2020</option>
-                                        <option>2021</option>
-                                        <option>2012</option>
-                                    </select>
-                                    <!-- Car Brand select  -->
-                                    <select class="brand--select" name="brand">
-                                        <option selected disabled>Car Brand</option>
-                                        <option>Audi</option>
-                                        <option>BMW</option>
-                                        <option>Chevrolet</option>
-                                        <option>Ford</option>
-                                        <option>Honda</option>
-                                        <option>Hyundai</option>
-                                        <option>Mercedes-Benz</option>
-                                        <option>Nissan</option>
-                                        <option>Toyota</option>
-                                        <option>Volkswagen</option>
-                                    </select>
-                                    <!-- car model select  -->
-                                    <select class="car-model--select" name="model">
-                                        <option selected disabled>Car Model</option>
-                                        <option>Audi A4</option>
-                                        <option>BMW 3 Series</option>
-                                        <option>Chevrolet Cruze</option>
-                                        <option>Ford Mustang</option>
-                                        <option>Honda Civic</option>
-                                        <option>Hyundai Sonata</option>
-                                        <option>Mercedes-Benz C-Class</option>
-                                        <option>Nissan Altima</option>
-                                        <option>Toyota Camry</option>
-                                        <option>Volkswagen Golf</option>
-                                    </select>
-                                    <!-- price-range--select  -->
-                                    <select class="price-range--select" name="price">
-                                        <option selected disabled>Price Range</option>
-                                        <option>Below $10,000</option>
-                                        <option>$10,000 - $20,000</option>
-                                        <option>$20,000 - $30,000</option>
-                                        <option>$30,000 - $40,000</option>
-                                        <option>$40,000 - $50,000</option>
-                                        <option>Above $50,000</option>
-                                    </select>
-                                    <button type="submit">hskhdf</button>
-                            </form>
+                            @include('frontend.layout.search')
                         </div>
 
                     </div>
