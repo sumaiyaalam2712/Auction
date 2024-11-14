@@ -8,57 +8,17 @@
                 <div class="row">
                     <div class="col-xxl-7 col-lg-6 mt_30">
                         <div class="about--content">
-                            <h1 data-aos="fade-up" data-aos-duration="1000">About US</h1>
+                            <h1 data-aos="fade-up" data-aos-duration="1000">{{ $about['section'] }}</h1>
                             <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                                Over the last few years, many car enthusiasts have started
-                                turning their attention to recent vehicles – cars from the
-                                1980s, 1990s, and beyond. Automotive reviewer <a
-                                    href="https://www.youtube.com/channel/UCsqjHFMB_JYTaEnf_vmTNqg" target="_blank">Doug
-                                    DeMuro</a> realized there isn’t yet a specific place that’s focused
-                                solely on buying and selling these modern enthusiast cars, but
-                                there should be – so he and a team created Cars & Bids, with
-                                its simple name modeled after Doug’s famous pursuit of “quirks
-                                and features.
+                                {!! $about['description'] !!}
                             </p>
-                            <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="150">
-                                Over the last few years, many car enthusiasts have started
-                                turning their attention to recent vehicles – cars from the
-                                1980s, 1990s, and beyond. Automotive reviewer <a
-                                    href="https://www.youtube.com/channel/UCsqjHFMB_JYTaEnf_vmTNqg" target="_blank">Doug
-                                    DeMuro</a> realized there isn’t yet a specific place that’s focused
-                                solely on buying and selling these modern enthusiast cars..
-                            </p>
-                            <ul>
-                                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                    <strong>We’re focused on modern enthusiast cars:</strong> the 1980s to the 2020s. That
-                                    means anyone interested in
-                                    the next era of exciting cars will come here first to buy
-                                    and sell.
-                                </li>
-                                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
-                                    <strong>We’re focused on modern enthusiast cars:</strong> the 1980s to the 2020s. That
-                                    means anyone interested in
-                                    the next era of exciting cars will come here first to buy
-                                    and sell.
-                                </li>
-                                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                                    <strong>We’re focused on modern enthusiast cars:</strong> the 1980s to the 2020s. That
-                                    means anyone interested in
-                                    the next era of exciting cars will come here first to buy
-                                    and sell.
-                                </li>
-                                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="350">
-                                    <strong>We’re focused on modern enthusiast cars:</strong> the 1980s to the 2020s. That
-                                    means anyone interested in
-                                    the next era of exciting cars will come here first to buy
-                                    and sell.
-                                </li>
-                            </ul>
+
                         </div>
                     </div>
                     <div class="col-xxl-5 col-lg-6 mt_30" data-aos="fade-up" data-aos-duration="1000">
                         <div class="img--area">
-                            <img class="w-100" src="./assets/images/about.png" alt="" />
+                            <img class="w-100" src="{{ asset('backend/assets/img/' . $about_photo['image']) }}"
+                                alt="" />
                         </div>
                     </div>
                 </div>
@@ -66,7 +26,7 @@
                     <div class="col-12" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100">
                         <!-- car review  -->
                         <div class="car--review">
-                            <img src="./assets/images/about.png" alt="" />
+                            <img src="{{ asset('backend/assets/img/' . $about_photo['image']) }}" alt="" />
                             <div>
                                 <h4>Saudi Cars Hubs</h4>
                                 <p>
@@ -135,11 +95,9 @@
                                                 fill="#FD7F54" />
                                         </svg>
                                     </div>
-                                    <h4>More Information</h4>
+                                    <h4>{{ $information['title'] }}</h4>
                                     <p>
-                                        We provide vehicle history reports<br />
-                                        for every vehicle listed on Cars &<br />
-                                        Bids — for free.
+                                        {!! $information['description'] !!}
                                     </p>
                                 </div>
                             </div>
@@ -158,11 +116,9 @@
                                                 fill="#FD7F54" />
                                         </svg>
                                     </div>
-                                    <h4>Easy to Use</h4>
+                                    <h4>{{ $easy_use['title'] }}</h4>
                                     <p>
-                                        We’ve developed several new<br />
-                                        features that innovate buying and<br />
-                                        selling enthusiast cars online.
+                                        {!! $easy_use['description'] !!}
                                     </p>
                                 </div>
                             </div>
@@ -224,7 +180,9 @@
                                     <div class="col-lg-5 mt_30" data-aos="fade-up" data-aos-duration="1000">
                                         <!-- img--area   -->
                                         <div class="img--area">
-                                            <img class="w-100" src="./assets/images/about.png" alt="" />
+                                            <img class="w-100"
+                                                src="{{ asset('backend/assets/img/' . $how_works_image['image']) }}"
+                                                alt="" />
                                         </div>
                                     </div>
                                     <div class="col-lg-7 mt_30">
@@ -264,7 +222,9 @@
                                     <div class="col-lg-5 mt_30">
                                         <!-- img--area   -->
                                         <div class="img--area">
-                                            <img class="w-100" src="./assets/images/cal-sell.png" alt="" />
+                                            <img class="w-100"
+                                                src="{{ asset('backend/assets/img/' . $how_works_image['image']) }}"
+                                                alt="" />
                                         </div>
                                     </div>
                                     <div class="col-lg-7 mt_30">
@@ -296,7 +256,9 @@
                                     <div class="col-lg-5 mt_30">
                                         <!-- img--area   -->
                                         <div class="img--area">
-                                            <img class="w-100" src="./assets/images/cal-sell.png" alt="" />
+                                            <img class="w-100"
+                                                src="{{ asset('backend/assets/img/' . $how_works_image['image']) }}"
+                                                alt="" />
                                         </div>
                                     </div>
                                     <div class="col-lg-7 mt_30">

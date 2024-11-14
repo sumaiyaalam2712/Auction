@@ -1195,47 +1195,15 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 mt_25">
-                    <!-- radio--box  -->
-                    <div class="radio--box">
-                        <h5>Where is the car located</h5>
-                        <div class="radio--options">
-                            <!-- input group  -->
-                            <div class="input--group">
-                                <input id="locate-saudi" type="radio" name="locate" required />
-                                <label for="locate-saudi">
-                                    Saudi
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="9.87132" cy="9.87132" r="8.87132" fill="#FD7F54" stroke="white"
-                                            stroke-width="2" />
-                                        <path
-                                            d="M14.0525 8.11854L9.3025 12.8685C9.1325 13.0385 8.9125 13.1185 8.6825 13.1185C8.4625 13.1185 8.2425 13.0385 8.0725 12.8685L5.6925 10.4985C5.3525 10.1485 5.3525 9.59854 5.6925 9.25854C6.0325 8.91854 6.5925 8.91854 6.9325 9.25854L8.6825 11.0085L12.8125 6.87854C13.1525 6.53854 13.7125 6.53854 14.0525 6.87854C14.3925 7.22854 14.3925 7.77854 14.0525 8.11854Z"
-                                            fill="white" />
-                                    </svg>
-                                </label>
-                            </div>
-                            <!-- input group  -->
-                            <div class="input--group">
-                                <input id="locate-arab" type="radio" name="locate" required />
-                                <label for="locate-arab">
-                                    Arab Amirat
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="9.87132" cy="9.87132" r="8.87132" fill="#FD7F54" stroke="white"
-                                            stroke-width="2" />
-                                        <path
-                                            d="M14.0525 8.11854L9.3025 12.8685C9.1325 13.0385 8.9125 13.1185 8.6825 13.1185C8.4625 13.1185 8.2425 13.0385 8.0725 12.8685L5.6925 10.4985C5.3525 10.1485 5.3525 9.59854 5.6925 9.25854C6.0325 8.91854 6.5925 8.91854 6.9325 9.25854L8.6825 11.0085L12.8125 6.87854C13.1525 6.53854 13.7125 6.53854 14.0525 6.87854C14.3925 7.22854 14.3925 7.77854 14.0525 8.11854Z"
-                                            fill="white" />
-                                    </svg>
-                                </label>
-                            </div>
-                        </div>
+                <div class="col-md-5 mt_25">
+                    <!-- input--group  -->
+                    <div class="input--group">
+                        <label for="make">Make</label>
+                        <input id="make" name="make" type="text" placeholder="Make" required />
                         <!-- error message  -->
-
+                        <p class="error"></p>
                     </div>
                 </div>
-
                 <!-- error message  -->
                 <p class="error"></p>
         </div>

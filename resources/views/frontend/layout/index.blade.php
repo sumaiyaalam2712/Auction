@@ -316,8 +316,8 @@
                         <!-- counter box  -->
                         <div class="counter--box first">
                             <h4>
-                                <p class="counter">18000</p>
-                                +
+
+                                {{ $auction_completion['value'] }} +
                             </h4>
                             <p>Auctions completed</p>
                         </div>
@@ -327,9 +327,9 @@
                         <!-- counter box  -->
                         <div class="counter--box">
                             <h4>
-                                $
-                                <p class="counter">415</p>
-                                M+
+
+
+                                $ {{ $value_sold['value'] }} M+
                             </h4>
                             <p>Value of cars sold</p>
                         </div>
@@ -339,8 +339,8 @@
                         <!-- counter box  -->
                         <div class="counter--box three">
                             <h4>
-                                <p class="counter">83</p>
-                                %+
+
+                                {{ $sell_percent['value'] }} %+
                             </h4>
                             <p>Sell-through rate</p>
                         </div>
@@ -350,8 +350,8 @@
                         <!-- counter box  -->
                         <div class="counter--box">
                             <h4>
-                                <p class="counter">510</p>
-                                K+
+
+                                {{ $register_member['value'] }} K+
                             </h4>
                             <p>Registered members</p>
                         </div>

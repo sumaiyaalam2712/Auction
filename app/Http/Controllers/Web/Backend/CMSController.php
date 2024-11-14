@@ -18,6 +18,8 @@ class CMSController extends Controller
     {
 
 
+
+
   $data=new CMS();
 
   $data->page=$request->page;
@@ -33,6 +35,7 @@ class CMSController extends Controller
     $data->image = null;
 }
       $data->description=$request->description;
+      $data->value=$request->value;
       $data->href=$request->href;
       $data->email=$request->email;
       $data->phone=$request->phone;
