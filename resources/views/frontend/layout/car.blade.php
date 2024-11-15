@@ -1218,207 +1218,233 @@
         <!-- from step  -->
 
         <!-- title info  -->
-        <div class="title--info">
-            <h4>Title Info</h4>
-            <!-- info box  -->
-            <div class="info--box">
-                <div class="row">
-                    <div class="col-md-4 mt_25">
-                        <!-- radio--box  -->
-                        <div class="radio--box">
-                            <h5>Where is the car titled?</h5>
-                            <div class="radio--options">
-                                <!-- input group  -->
-                                <div class="input--group">
-                                    <input id="audi-car" type="radio" name="car-titled" required />
-                                    <label for="audi-car">
-                                        Audi R817
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="9.87132" cy="9.87132" r="8.87132" fill="#FD7F54"
-                                                stroke="white" stroke-width="2" />
-                                            <path
-                                                d="M14.0525 8.11854L9.3025 12.8685C9.1325 13.0385 8.9125 13.1185 8.6825 13.1185C8.4625 13.1185 8.2425 13.0385 8.0725 12.8685L5.6925 10.4985C5.3525 10.1485 5.3525 9.59854 5.6925 9.25854C6.0325 8.91854 6.5925 8.91854 6.9325 9.25854L8.6825 11.0085L12.8125 6.87854C13.1525 6.53854 13.7125 6.53854 14.0525 6.87854C14.3925 7.22854 14.3925 7.77854 14.0525 8.11854Z"
-                                                fill="white" />
-                                        </svg>
-                                    </label>
+        <div class="form--step">
+            <!-- title info  -->
+            <div class="title--info">
+                <h4>Title Info</h4>
+                <!-- info box  -->
+                <div class="info--box">
+                    <div class="row">
+                        <div class="col-md-4 mt_25">
+                            <!-- radio--box  -->
+                            <div class="radio--box">
+                                <h5>Where is the car titled?</h5>
+                                <div class="radio--options">
+                                    <!-- input group  -->
+                                    <div class="input--group">
+                                        <input id="audi-car" type="radio" name="car-titled" required />
+                                        <label for="audi-car">
+                                            Audi R817
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="9.87132" cy="9.87132" r="8.87132" fill="#FD7F54"
+                                                    stroke="white" stroke-width="2" />
+                                                <path
+                                                    d="M14.0525 8.11854L9.3025 12.8685C9.1325 13.0385 8.9125 13.1185 8.6825 13.1185C8.4625 13.1185 8.2425 13.0385 8.0725 12.8685L5.6925 10.4985C5.3525 10.1485 5.3525 9.59854 5.6925 9.25854C6.0325 8.91854 6.5925 8.91854 6.9325 9.25854L8.6825 11.0085L12.8125 6.87854C13.1525 6.53854 13.7125 6.53854 14.0525 6.87854C14.3925 7.22854 14.3925 7.77854 14.0525 8.11854Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </label>
+                                    </div>
+                                    <!-- input group  -->
+                                    <div class="input--group">
+                                        <input id="toyota" type="radio" name="car-titled" required />
+                                        <label for="toyota">
+                                            Toyota Supra
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="9.87132" cy="9.87132" r="8.87132" fill="#FD7F54"
+                                                    stroke="white" stroke-width="2" />
+                                                <path
+                                                    d="M14.0525 8.11854L9.3025 12.8685C9.1325 13.0385 8.9125 13.1185 8.6825 13.1185C8.4625 13.1185 8.2425 13.0385 8.0725 12.8685L5.6925 10.4985C5.3525 10.1485 5.3525 9.59854 5.6925 9.25854C6.0325 8.91854 6.5925 8.91854 6.9325 9.25854L8.6825 11.0085L12.8125 6.87854C13.1525 6.53854 13.7125 6.53854 14.0525 6.87854C14.3925 7.22854 14.3925 7.77854 14.0525 8.11854Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </label>
+                                    </div>
                                 </div>
-                                <!-- input group  -->
-                                <div class="input--group">
-                                    <input id="toyota" type="radio" name="car-titled" required />
-                                    <label for="toyota">
-                                        Toyota Supra
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="9.87132" cy="9.87132" r="8.87132" fill="#FD7F54"
-                                                stroke="white" stroke-width="2" />
-                                            <path
-                                                d="M14.0525 8.11854L9.3025 12.8685C9.1325 13.0385 8.9125 13.1185 8.6825 13.1185C8.4625 13.1185 8.2425 13.0385 8.0725 12.8685L5.6925 10.4985C5.3525 10.1485 5.3525 9.59854 5.6925 9.25854C6.0325 8.91854 6.5925 8.91854 6.9325 9.25854L8.6825 11.0085L12.8125 6.87854C13.1525 6.53854 13.7125 6.53854 14.0525 6.87854C14.3925 7.22854 14.3925 7.77854 14.0525 8.11854Z"
-                                                fill="white" />
-                                        </svg>
-                                    </label>
-                                </div>
+                                <!-- error message  -->
+                                <p class="error"></p>
                             </div>
-                            <!-- error message  -->
-                            <p class="error"></p>
                         </div>
-                    </div>
-                    <div class="col-md-8 mt_25">
-                        <div class="input--group">
-                            <label for="state">State</label>
-                            <select>
-                                <option value="1" selected>State 1</option>
-                                <option value="2">State 2</option>
-                                <option value="3">State 3</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    < <div class="col-md-8 mt_25">
-                        <div class="input--group">
-                            <label for="state">/label>
+                        <div class="col-md-8 mt_25">
+                            <div class="input--group">
+                                <label for="state">State</label>
                                 <select>
-                                    <option value="Newyork" selected>Newyork</option>
-                                    <option value="2">2</option>
-                                    <option value="8">State 8</option>
+                                    <option value="1" selected>State 1</option>
+                                    <option value="2">State 2</option>
+                                    <option value="3">State 3</option>
                                 </select>
+                            </div>
                         </div>
+
+                        <div class="col-md-4 mt_25">
+                            <!-- radio--box  -->
+                            <div class="radio--box">
+                                <h5>Is the Vehicle titled in your name?</h5>
+                                <div class="radio--options">
+                                    <!-- input group  -->
+                                    <div class="input--group">
+                                        <input id="named-yes" type="radio" name="vehicle--titled" required />
+                                        <label for="named-yes">
+                                            Yes
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="9.87132" cy="9.87132" r="8.87132" fill="#FD7F54"
+                                                    stroke="white" stroke-width="2" />
+                                                <path
+                                                    d="M14.0525 8.11854L9.3025 12.8685C9.1325 13.0385 8.9125 13.1185 8.6825 13.1185C8.4625 13.1185 8.2425 13.0385 8.0725 12.8685L5.6925 10.4985C5.3525 10.1485 5.3525 9.59854 5.6925 9.25854C6.0325 8.91854 6.5925 8.91854 6.9325 9.25854L8.6825 11.0085L12.8125 6.87854C13.1525 6.53854 13.7125 6.53854 14.0525 6.87854C14.3925 7.22854 14.3925 7.77854 14.0525 8.11854Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </label>
+                                    </div>
+                                    <!-- input group  -->
+                                    <div class="input--group">
+                                        <input id="named-no" type="radio" name="vehicle--titled" required />
+                                        <label for="named-no">
+                                            No
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="9.87132" cy="9.87132" r="8.87132" fill="#FD7F54"
+                                                    stroke="white" stroke-width="2" />
+                                                <path
+                                                    d="M14.0525 8.11854L9.3025 12.8685C9.1325 13.0385 8.9125 13.1185 8.6825 13.1185C8.4625 13.1185 8.2425 13.0385 8.0725 12.8685L5.6925 10.4985C5.3525 10.1485 5.3525 9.59854 5.6925 9.25854C6.0325 8.91854 6.5925 8.91854 6.9325 9.25854L8.6825 11.0085L12.8125 6.87854C13.1525 6.53854 13.7125 6.53854 14.0525 6.87854C14.3925 7.22854 14.3925 7.77854 14.0525 8.11854Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- error message  -->
+                                <p class="error"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-8 mt_25">
+                            <div class="input--group">
+                                <label for="state">What is the title’s status?</label>
+                                <select>
+                                    <option value="1" selected>State 1</option>
+                                    <option value="2">State 2</option>
+                                    <option value="3">State 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- reserve price  -->
+            <div class="reserve--price mt_35">
+                <h4>Reserve Price</h4>
+                <!-- info box  -->
+                <div class="info--box">
+                    <div class="row">
+                        <div class="col-12 mt_25">
+                            <!-- radio--box  -->
+                            <div class="radio--box">
+                                <h5>
+                                    Do you want to set a minimum price required for your
+                                    vehicle to sell?
+                                </h5>
+                                <div class="radio--options">
+                                    <!-- input group  -->
+                                    <div class="input--group">
+                                        <input id="minimum-yes" type="radio" name="minimum" required />
+                                        <label for="minimum-yes">
+                                            Yes
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="9.87132" cy="9.87132" r="8.87132" fill="#FD7F54"
+                                                    stroke="white" stroke-width="2" />
+                                                <path
+                                                    d="M14.0525 8.11854L9.3025 12.8685C9.1325 13.0385 8.9125 13.1185 8.6825 13.1185C8.4625 13.1185 8.2425 13.0385 8.0725 12.8685L5.6925 10.4985C5.3525 10.1485 5.3525 9.59854 5.6925 9.25854C6.0325 8.91854 6.5925 8.91854 6.9325 9.25854L8.6825 11.0085L12.8125 6.87854C13.1525 6.53854 13.7125 6.53854 14.0525 6.87854C14.3925 7.22854 14.3925 7.77854 14.0525 8.11854Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </label>
+                                    </div>
+                                    <!-- input group  -->
+                                    <div class="input--group">
+                                        <input id="minimum-no" type="radio" name="minimum" required />
+                                        <label for="minimum-no">
+                                            No
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="9.87132" cy="9.87132" r="8.87132" fill="#FD7F54"
+                                                    stroke="white" stroke-width="2" />
+                                                <path
+                                                    d="M14.0525 8.11854L9.3025 12.8685C9.1325 13.0385 8.9125 13.1185 8.6825 13.1185C8.4625 13.1185 8.2425 13.0385 8.0725 12.8685L5.6925 10.4985C5.3525 10.1485 5.3525 9.59854 5.6925 9.25854C6.0325 8.91854 6.5925 8.91854 6.9325 9.25854L8.6825 11.0085L12.8125 6.87854C13.1525 6.53854 13.7125 6.53854 14.0525 6.87854C14.3925 7.22854 14.3925 7.77854 14.0525 8.11854Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- error message  -->
+                                <p class="error"></p>
+                            </div>
+                        </div>
+                        <!-- set price  -->
+                        <div class="input--group mt_25">
+                            <label for="set-price">Set Price
+                                <span>(Minimum bid increment is $250. All bids in USD)</span></label>
+                            <div class="set-inputs">
+                                <input type="text" placeholder="USD ($)" />
+                                <input type="text" value="25,0000" required />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- photos  -->
+            <div class="photos mt_35">
+                <h4>Upload Photos & Videos</h4>
+                <!-- info box  -->
+                <div class="info--box">
+                    <h5 class="mt_25">
+                        Please upload at last 6 photos and one videos of the Exterior and Interior of
+                        the car
+                    </h5>
+                    <!-- upload box  -->
+                    <div class="dash--upload--box">
+                        <form action="print-demo.html">
+                            <label for="dash-upload">
+                                <input type="file" class="form-control dropify" name="dash-upload"
+                                    id="dash-upload" />
+                            </label>
+                        </form>
+                    </div>
+                    <p>
+                        To learn more about taking great car photos,
+                        <a href="#">Check out our photo guide</a>
+                    </p>
+                    <p class="error"></p>
+                    <div class="buttons mt_70">
+                        <a href="#" class="button prev--btn">
+                            Prev
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.2945 8.7976C18.6937 8.74142 19.0005 8.39309 18.9992 7.97273C18.9978 7.51416 18.6304 7.14352 18.1785 7.14489L3.79684 7.18831L8.9762 1.92152L9.05533 1.82832C9.29267 1.50304 9.26581 1.04178 8.97505 0.747269C8.65521 0.423302 8.13717 0.423778 7.81796 0.748331L1.24974 7.42666C1.21064 7.46491 1.17528 7.50707 1.14427 7.55252C0.922203 7.87745 0.954981 8.32717 1.24174 8.61518L7.86184 15.2644L7.95402 15.3443C8.27556 15.5838 8.72996 15.5546 9.01891 15.2583C9.33676 14.9324 9.33406 14.4067 9.01287 14.0841L3.80056 8.84895L18.1835 8.80552L18.2945 8.7976Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <button class="button w-100 form--btn submit-btn" type="submit">
+                            Submit
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.707159 7.17715C0.307804 7.23213 0 7.57953 0 7.99989C0 8.45846 0.366312 8.83021 0.818182 8.83021L15.1999 8.83021L10.0047 14.0813L9.92528 14.1743C9.68696 14.4989 9.71243 14.9602 10.0023 15.2556C10.3212 15.5805 10.8392 15.5816 11.1594 15.258L17.7477 8.59955C17.787 8.56142 17.8224 8.51937 17.8536 8.47401C18.0766 8.14976 18.0452 7.69994 17.7593 7.41106L11.1593 0.741932L11.0674 0.661737C10.7466 0.421253 10.2921 0.449045 10.0023 0.744461C9.68342 1.06942 9.68454 1.59515 10.0047 1.91871L15.2012 7.16957L0.818182 7.16957L0.707159 7.17715Z"
+                                    fill="white" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- reserve price  -->
-        <div class="reserve--price mt_35">
-            <h4>Reserve Price</h4>
-            <!-- info box  -->
-            <div class="info--box">
-                <div class="row">
-                    <div class="col-12 mt_25">
-                        <!-- radio--box  -->
-                        <div class="radio--box">
-                            <h5>
-                                Do you want to set a minimum price required for your
-                                vehicle to sell?
-                            </h5>
-                            <div class="radio--options">
-                                <!-- input group  -->
-                                <div class="input--group">
-                                    <input id="minimum-yes" type="radio" name="minimum" required />
-                                    <label for="minimum-yes">
-                                        Yes
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="9.87132" cy="9.87132" r="8.87132" fill="#FD7F54"
-                                                stroke="white" stroke-width="2" />
-                                            <path
-                                                d="M14.0525 8.11854L9.3025 12.8685C9.1325 13.0385 8.9125 13.1185 8.6825 13.1185C8.4625 13.1185 8.2425 13.0385 8.0725 12.8685L5.6925 10.4985C5.3525 10.1485 5.3525 9.59854 5.6925 9.25854C6.0325 8.91854 6.5925 8.91854 6.9325 9.25854L8.6825 11.0085L12.8125 6.87854C13.1525 6.53854 13.7125 6.53854 14.0525 6.87854C14.3925 7.22854 14.3925 7.77854 14.0525 8.11854Z"
-                                                fill="white" />
-                                        </svg>
-                                    </label>
-                                </div>
-                                <!-- input group  -->
-                                <div class="input--group">
-                                    <input id="minimum-no" type="radio" name="minimum" required />
-                                    <label for="minimum-no">
-                                        No
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="9.87132" cy="9.87132" r="8.87132" fill="#FD7F54"
-                                                stroke="white" stroke-width="2" />
-                                            <path
-                                                d="M14.0525 8.11854L9.3025 12.8685C9.1325 13.0385 8.9125 13.1185 8.6825 13.1185C8.4625 13.1185 8.2425 13.0385 8.0725 12.8685L5.6925 10.4985C5.3525 10.1485 5.3525 9.59854 5.6925 9.25854C6.0325 8.91854 6.5925 8.91854 6.9325 9.25854L8.6825 11.0085L12.8125 6.87854C13.1525 6.53854 13.7125 6.53854 14.0525 6.87854C14.3925 7.22854 14.3925 7.77854 14.0525 8.11854Z"
-                                                fill="white" />
-                                        </svg>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <!-- modification--textarea  -->
-                                <div class="modification--textarea mt_25">
-                                    <label for="service_history">List any modifications, including
-                                        modification or
-                                        removal of the catalytic converters.
-                                    </label>
-                                    <textarea id="service_history" placeholder="If you have service history..... " name="service_history"></textarea>
-                                </div>
-                                <!-- sagnificant mechanical textarea  -->
-                                <div class="sagnificant--textarea mt_25">
-                                    <label for="ownership_history">Please give details
-                                    </label>
-                                    <textarea id="ownership_history" name="ownership_history" placeholder="Write about former ownership"></textarea>
-                                </div>
-                            </div>
-
-                            <!-- error message  -->
-                            <p class="error"></p>
-                            <!--price  -->
-                            <div class="input--group mt_25">
-                                <label for="minimum_price">Set Price
-                                    <span>(Minimum bid increment is $250. All bids in USD)</span></label>
-                                <div class="set-inputs">
-                                    <input type="text" name="minimum_price" placeholder="USD ($)" />
-                                    <input type="text" name="minimum_price_increment" value="25,0000" required />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- photos  -->
-                <div class="photos mt_35">
-                    <h4>Upload Photos & Videos</h4>
-                    <!-- info box  -->
-                    <div class="info--box">
-                        <h5 class="mt_25">
-                            Please upload at last 6 photos and one videos of the Exterior and Interior of
-                            the car
-                        </h5>
-                        <!-- upload box  -->
-                        <div class="dash--upload--box">
-                            <form action="print-demo.html">
-                                <label for="dash-upload">
-                                    <input type="file" class="form-control dropify" name="dash-upload"
-                                        id="dash-upload" />
-                                </label>
-                            </form>
-                        </div>
-                        <p>
-                            To learn more about taking great car photos,
-                            <a href="#">Check out our photo guide</a>
-                        </p>
-                        <p class="error"></p>
-                        <div class="buttons mt_70">
-                            <a href="#" class="button prev--btn">
-                                Prev
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16"
-                                    viewBox="0 0 20 16" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M18.2945 8.7976C18.6937 8.74142 19.0005 8.39309 18.9992 7.97273C18.9978 7.51416 18.6304 7.14352 18.1785 7.14489L3.79684 7.18831L8.9762 1.92152L9.05533 1.82832C9.29267 1.50304 9.26581 1.04178 8.97505 0.747269C8.65521 0.423302 8.13717 0.423778 7.81796 0.748331L1.24974 7.42666C1.21064 7.46491 1.17528 7.50707 1.14427 7.55252C0.922203 7.87745 0.954981 8.32717 1.24174 8.61518L7.86184 15.2644L7.95402 15.3443C8.27556 15.5838 8.72996 15.5546 9.01891 15.2583C9.33676 14.9324 9.33406 14.4067 9.01287 14.0841L3.80056 8.84895L18.1835 8.80552L18.2945 8.7976Z"
-                                        fill="white" />
-                                </svg>
-                            </a>
-                            <button class="button w-100 form--btn submit-btn" type="submit">
-                                Submit
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16"
-                                    viewBox="0 0 18 16" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M0.707159 7.17715C0.307804 7.23213 0 7.57953 0 7.99989C0 8.45846 0.366312 8.83021 0.818182 8.83021L15.1999 8.83021L10.0047 14.0813L9.92528 14.1743C9.68696 14.4989 9.71243 14.9602 10.0023 15.2556C10.3212 15.5805 10.8392 15.5816 11.1594 15.258L17.7477 8.59955C17.787 8.56142 17.8224 8.51937 17.8536 8.47401C18.0766 8.14976 18.0452 7.69994 17.7593 7.41106L11.1593 0.741932L11.0674 0.661737C10.7466 0.421253 10.2921 0.449045 10.0023 0.744461C9.68342 1.06942 9.68454 1.59515 10.0047 1.91871L15.2012 7.16957L0.818182 7.16957L0.707159 7.17715Z"
-                                        fill="white" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- popup close  -->
-            <div class="pop--close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37"
-                    fill="none">
-                    <path
-                        d="M18.4986 16.3209L26.1295 8.68994L28.3098 10.8702L20.6788 18.5011L28.3098 26.1319L26.1295 28.3121L18.4986 20.6813L10.8678 28.3121L8.6875 26.1319L16.3184 18.5011L8.6875 10.8702L10.8678 8.68994L18.4986 16.3209Z"
-                        fill="#141414" />
-                </svg>
-            </div>
-            </form>
+        <!-- popup close  -->
+        <div class="pop--close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37" fill="none">
+                <path
+                    d="M18.4986 16.3209L26.1295 8.68994L28.3098 10.8702L20.6788 18.5011L28.3098 26.1319L26.1295 28.3121L18.4986 20.6813L10.8678 28.3121L8.6875 26.1319L16.3184 18.5011L8.6875 10.8702L10.8678 8.68994L18.4986 16.3209Z"
+                    fill="#141414" />
+            </svg>
+        </div>
+        </form>
         </div>
         <!-- car sell step form popup :: end  -->
     </main>

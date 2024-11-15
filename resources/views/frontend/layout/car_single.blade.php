@@ -291,10 +291,7 @@
                                 </p>
                             </div>
                             <!-- other items  -->
-                            <div class="other--items details mt_35" data-aos="fade-up" data-aos-duration="1000">
-                                <h4>Other Items Included in Sale</h4>
-                                {{ $car['other_items'] }}
-                            </div>
+
                             <!-- ownership history  -->
                             <div class="ownership--history details mt_35" data-aos="fade-up" data-aos-duration="1000">
                                 <h4>Ownership History</h4>

@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Web\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Car;
-
+use Carbon\Carbon;
 use function Ramsey\Uuid\v1;
 
 class CarController extends Controller
@@ -32,17 +32,13 @@ class CarController extends Controller
          $data->description=$request->description;
          $data->highlight=$request->highlight;
          $data->modification_status=$request->modification_status;
-         $data->other_items=$request->other_items;
          $data->equipment=$request->equipment;
          $data->service_history=$request->service_history;
          $data->ownership_history=$request->ownership_history;
          $data->country=$request->country;
          $data->state=$request->state;
          $data->minimum_price=$request->minimum_price;
-         $data->minimum_price_increment=$request->minimum_price_increment;
-         $data->start_time=$request->start_time;
-         $data->end_time=$request->end_time;
-         $data->end_time=$request->end_time;
+         $data->end_time=Carbon::today();
          $data->save();
          return redirect()->back();
    }
