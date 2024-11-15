@@ -193,7 +193,7 @@
 
                                     <div class="tr">
                                         <div class="tt">Brand</div>
-                                        <div class="td">{{ $car['brand'] }}</div>
+                                        <div class="td"></div>
                                     </div>
                                     <div class="tr">
                                         <div class="tt">Make</div>

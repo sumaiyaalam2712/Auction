@@ -17,30 +17,9 @@
                             <div class="category--and--sort" data-aos="fade-zoom-in" data-aos-duration="400"
                                 data-aos-delay="100" data-aos-offset="0">
                                 <!-- car category  -->
-                                <select>
-                                    <option selected disabled>Choose Car Category</option>
-                                    <option>Sedan</option>
-                                    <option>SUV</option>
-                                    <option>Coupe</option>
-                                    <option>Hatchback</option>
-                                    <option>Convertible</option>
-                                    <option>Wagon</option>
-                                    <option>Minivan</option>
-                                    <option>Pickup Truck</option>
-                                    <option>Crossover</option>
-                                    <option>Luxury Car</option>
-                                    <option>Electric Vehicle</option>
-                                    <option>Hybrid Vehicle</option>
-                                </select>
+
                                 <!-- sort by  -->
-                                <div class="sort--by">
-                                    <p>Sort By</p>
-                                    <ul>
-                                        <li class="active">Ending Soon</li>
-                                        <li>Newly listed</li>
-                                        <li>Closest to Me</li>
-                                    </ul>
-                                </div>
+
                             </div>
                             <!-- filters  -->
                             @include('frontend.layout.search')

@@ -45,12 +45,25 @@ class SearchController extends Controller
         $min_price="";
         $max_price="";
       }
-      $search=Car::where('year','like','%'.$year.'%')
-      //->where('brand','like','%'.$brand.'%')
-      ->where('model','like','%'.$model.'%')
 
-     ->whereBetween('minimum_price',[$min_price,$max_price])
-      ->get();
+      if(!empty($year) && !empty($model) && !empty($price_range))
+      {
+        $search=Car::where('year',$year)
+        ->where('model','like','%'.$model.'%')
+        ->whereBetween('minimum_price',[$min_price,$max_price])
+        ->orderBy('minimum_price','desc')
+        ->get();
+      }
+
+
+     else{
+        $search=Car::where('year',$year)
+        ->orWhere('model','like','%'.$model.'%')
+        ->orWhereBetween('minimum_price',[$min_price,$max_price])
+        ->orderBy('minimum_price','desc')
+        ->get();
+
+     }
       return view('frontend.layout.search_car',['data'=>$search,'reviews' => $review]);
 
     }

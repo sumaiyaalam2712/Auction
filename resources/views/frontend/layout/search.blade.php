@@ -27,7 +27,11 @@
             <option>Volkswagen</option>
         </select>
         <!-- car model select  -->
-        <input type="text" name="model">
+
+        <input type="text" class="form-control" name="model" placeholder="Enter Model">
+
+
+
         <!-- price-range--select  -->
         <select class="price-range--select" name="price_range">
             <option selected disabled>Price Range</option>
@@ -40,5 +44,5 @@
             <option value="above50">Above $50,000</option>
 
         </select>
-        <button type="submit">search</button>
+        <button type="submit" class="btn btn-dark">Search</button>
 </form>
