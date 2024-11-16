@@ -12,6 +12,36 @@ class CarController extends Controller
 {
    public function store(Request $request)
    {
+    $request->validate(
+        [
+
+         'owner_name'=>'required',
+           'phone'=>'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+           'title'=>'required',
+           'vin_number'=>'nullable',
+           'brand_id'=>'required',
+           'year'=>'required',
+           'model'=>'required',
+           'make'=>'nullable',
+           'engine'=>'required',
+           'drive_train'=>'required',
+           'transmission'=>'required',
+           'mileage'=>'required',
+           'body_style'=>'required',
+           'interior_color'=>'required',
+           'exterior_color'=>'required',
+           'description'=>'required',
+           'modification_status'=>'required',
+           'service_history'=>'required',
+           'ownership_history'=>'required',
+           'country'=>'required',
+           'state'=>'required',
+           'minimum_price'=>'required'
+
+        ],
+        ['required'=>'Fill with valid information']
+        );
+
          $data=new Car();
          $data->user_id=auth()->user()->id;
          $data->owner_name=$request->owner_name;
@@ -38,7 +68,7 @@ class CarController extends Controller
          $data->country=$request->country;
          $data->state=$request->state;
          $data->minimum_price=$request->minimum_price;
-         $data->end_time=Carbon::today();
+         $data->end_time=Carbon::today()->addDays(7);
          $data->save();
          return redirect()->back();
    }

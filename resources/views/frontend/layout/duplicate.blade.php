@@ -1,18 +1,11 @@
 @extends('frontend.app')
 @section('content')
     <main>
-
         <!-- overlay  -->
         <div class="overlay"></div>
         <!-- sell car hero area :: start  -->
-        @if (session('error'))
-            <div class="alert alert-success">
-                {{ session('error') }}
-            </div>
-        @endif
         <section class="sell--car--hero--area" style="background-image: url(./assets/images/sell-hero-bg.png)">
             <div class="container">
-
                 <div class="row">
                     <div class="col-12">
                         <div class="sell--hero--content">
@@ -1188,11 +1181,9 @@
                                     <div class="input--group">
                                         <label for="owner_name">Owner Name</label>
                                         <input id="owner_name" name="owner_name" type="text"
-                                            placeholder="Enter your  name">
+                                            placeholder="Enter your  name" required />
                                         <!-- invalid message  -->
-                                        @error('owner_name')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-6 mt_25">
@@ -1200,11 +1191,9 @@
                                     <div class="input--group">
                                         <label for="phone">Contact Number</label>
                                         <input id="phone" name="phone" type="text"
-                                            placeholder="Enter your contact number">
+                                            placeholder="Enter your contact number" required />
                                         <!-- invalid message  -->
-                                        @error('phone')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
                             </div>
@@ -1218,27 +1207,20 @@
                                 <!-- input--group  -->
                                 <div class="input--group mt_25">
                                     <label for="brand_id">Brand</label>
-                                    <select name="brand_id">
-                                        @foreach ($data as $brand)
-                                            <option value="{{ $brand['id'] }}" selected>{{ $brand['name'] }}</option>
-                                        @endforeach
-                                    </select>
+                                    <input id="brand_id" name="brand_id" type="text"
+                                        placeholder="Enter title of car" required />
                                     <!-- invalid message  -->
-                                    @error('brand_id')
-                                        <strong style="color:#9966ff">{{ $message }}</strong>
-                                    @enderror
+                                    <p class="error"></p>
                                 </div>
                             </div>
                             <div class="vin--number">
                                 <!-- input--group  -->
                                 <div class="input--group mt_25">
                                     <label for="title">Car Title</label>
-                                    <input id="title" name="title" type="text"
-                                        placeholder="Enter title of car">
+                                    <input id="title" name="title" type="text" placeholder="Enter title of car"
+                                        required />
                                     <!-- invalid message  -->
-                                    @error('title')
-                                        <strong style="color:#9966ff">{{ $message }}</strong>
-                                    @enderror
+                                    <p class="error"></p>
                                 </div>
                             </div>
                             <!-- vin number  -->
@@ -1246,11 +1228,9 @@
                                 <!-- input--group  -->
                                 <div class="input--group mt_25">
                                     <label for="vin-number">VIN Number</label>
-                                    <input id="vin-number" type="text" placeholder="Enter VIN number">
+                                    <input id="vin-number" type="number" placeholder="Enter VIN number" required />
                                     <!-- invalid message  -->
-                                    @error('vin_number')
-                                        <strong style="color:#9966ff">{{ $message }}</strong>
-                                    @enderror
+                                    <p class="error"></p>
                                 </div>
                             </div>
                             <div class="row">
@@ -1261,7 +1241,7 @@
                                         <!-- input--group  -->
                                         <div class="input--group">
                                             <label for="year">Year</label>
-                                            <select name="year">
+                                            <select required name="year">
                                                 <option value="2024" selected>2024</option>
                                                 <option value="2023">2023</option>
                                                 <option value="2022">2022</option>
@@ -1297,9 +1277,6 @@
                                                 <option value="1992">1992</option>
                                                 <option value="1991">1991</option>
                                             </select>
-                                            @error('year')
-                                                <strong style="color:#9966ff">{{ $message }}</strong>
-                                            @enderror
                                         </div>
                                     </div>
                                 </div>
@@ -1308,22 +1285,20 @@
                                     <!-- input--group  -->
                                     <div class="input--group">
                                         <label for="make">Make</label>
-                                        <input id="make" name="make" type="text" placeholder="Make">
+                                        <input id="make" name="make" type="text" placeholder="Make"
+                                            required />
                                         <!-- error message  -->
-                                        @error('make')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-5 mt_25">
                                     <!-- input--group  -->
                                     <div class="input--group">
                                         <label for="model">Model</label>
-                                        <input id="model" name="model" type="text" placeholder="Model">
+                                        <input id="model" name="model" type="text" placeholder="Model"
+                                            required />
                                         <!-- error message  -->
-                                        @error('model')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-5 mt_25">
@@ -1338,9 +1313,6 @@
                                             </option>
                                             <option value="Dual-Clutch Transmission">Dual-Clutch Transmission</option>
                                         </select>
-                                        @error('transmission')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-md-7 mt_25">
@@ -1348,34 +1320,29 @@
                                     <div class="input--group">
                                         <label for="mileage">Mileage <span>(in miles)</span></label>
                                         <input id="mileage" name="mileage" type="text"
-                                            placeholder="Enter your car mileage">
+                                            placeholder="Enter your car mileage" required />
                                         <!-- error message  -->
-                                        @error('mileage')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-5 mt_25">
                                     <!-- input--group  -->
                                     <div class="input--group">
                                         <label for="engine">Engine</label>
-                                        <input id="engine" name="engine" type="text" placeholder="engine">
+                                        <input id="engine" name="engine" type="text" placeholder="engine"
+                                            required />
                                         <!-- error message  -->
-                                        @error('engine')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-5 mt_25">
                                     <!-- input--group  -->
                                     <div class="input--group">
                                         <label for="body_style">Body style</label>
-                                        <input id="body_style" name="body_style" type="text"
-                                            placeholder="Body style">
+                                        <input id="body_style" name="body_style" type="text" placeholder="Body style"
+                                            required />
                                         <!-- error message  -->
-                                        @error('body_style')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-5 mt_25">
@@ -1383,11 +1350,9 @@
                                     <div class="input--group">
                                         <label for="interior_color">Interior color</label>
                                         <input id="interior_color" name="interior_color" type="text"
-                                            placeholder="Interior color">
+                                            placeholder="Interior color" required />
                                         <!-- error message  -->
-                                        @error('interior_color')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-5 mt_25">
@@ -1395,11 +1360,9 @@
                                     <div class="input--group">
                                         <label for="exterior_color">Exterior Color</label>
                                         <input id="exterior_color" name="exterior_color" type="text"
-                                            placeholder="exterior Color">
+                                            placeholder="exterior Color" required />
                                         <!-- error message  -->
-                                        @error('exterior_color')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+
                                     </div>
                                 </div>
 
@@ -1407,22 +1370,18 @@
                                     <div class="input--group">
                                         <label for="drive_train">Drive train</label>
                                         <input id="drive_train" name="drive_train" type="text"
-                                            placeholder="Drive train">
+                                            placeholder="Drive train" required />
                                         <!-- error message  -->
-                                        @error('drive_train')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-12 mt_25">
                                     <!-- input--group  -->
                                     <div class="input--group">
                                         <label for="equipment">Equipment</label>
-                                        <textarea id="equipment" name="equipment" placeholder="Write down some significant equipments of the Car "></textarea>
+                                        <textarea id="equipment" name="equipment" placeholder="Write down some significant equipments of the Car " required></textarea>
                                         <!-- error message  -->
-                                        @error('equipment')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-12 mt_25">
@@ -1430,22 +1389,19 @@
                                     <div class="input--group">
                                         <label for="description">Description</label>
                                         <textarea id="description" name="description"
-                                            placeholder="For example: sport package, long-range battery, FSD or other important factory-installed features "></textarea>
+                                            placeholder="For example: sport package, long-range battery, FSD or other important factory-installed features "
+                                            required></textarea>
                                         <!-- error message  -->
-                                        @error('description')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
                                 <div class="col-md-12 mt_25">
                                     <!-- input--group  -->
                                     <div class="input--group">
                                         <label for="highlight">Highlight</label>
-                                        <textarea id="highlight" name="highlight" placeholder="..."></textarea>
+                                        <textarea id="highlight" name="highlight" placeholder="..." required></textarea>
                                         <!-- error message  -->
-                                        @error('highlight')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
 
@@ -1457,7 +1413,7 @@
                                             <!-- input group  -->
                                             <div class="input--group">
                                                 <input id="completely-stock" type="radio" name="modification_status"
-                                                    value="Completely Stock">
+                                                    value="Completely Stock" required />
                                                 <label for="completely-stock">
                                                     Completely Stock
                                                     <svg width="20" height="20" viewBox="0 0 20 20"
@@ -1473,7 +1429,7 @@
                                             <!-- input group  -->
                                             <div class="input--group">
                                                 <input id="modified" type="radio" name="modification_status"
-                                                    value="Modified">
+                                                    value="Modified" required />
                                                 <label for="modified">
                                                     Modified
                                                     <svg width="20" height="20" viewBox="0 0 20 20"
@@ -1488,9 +1444,7 @@
                                             </div>
                                         </div>
                                         <!-- error message  -->
-                                        @error('modification_status')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
                                 <div class="col-xl-8 mt_25">
@@ -1504,7 +1458,7 @@
                                             <!-- input group  -->
                                             <div class="input--group">
                                                 <input id="sag-yes" type="radio" name="service_history"
-                                                    value="It had gone under service">
+                                                    value="It had gone under service" required />
                                                 <label for="sag-yes">
                                                     Yes
                                                     <svg width="20" height="20" viewBox="0 0 20 20"
@@ -1520,7 +1474,7 @@
                                             <!-- input group  -->
                                             <div class="input--group">
                                                 <input id="sag-no" type="radio" name="service_history"
-                                                    value="No Service history">
+                                                    value="No Service history" required />
                                                 <label for="sag-no">
                                                     No
                                                     <svg width="20" height="20" viewBox="0 0 20 20"
@@ -1535,9 +1489,7 @@
                                             </div>
                                         </div>
                                         <!-- error message  -->
-                                        @error('service_history')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
 
@@ -1549,7 +1501,8 @@
                                         <div class="radio--options">
                                             <!-- input group  -->
                                             <div class="input--group">
-                                                <input id="locate-saudi" type="radio" name="country" value="Saudi">
+                                                <input id="locate-saudi" type="radio" name="country" value="Saudi"
+                                                    required />
                                                 <label for="locate-saudi">
                                                     Saudi
                                                     <svg width="20" height="20" viewBox="0 0 20 20"
@@ -1565,7 +1518,7 @@
                                             <!-- input group  -->
                                             <div class="input--group">
                                                 <input id="locate-arab" type="radio" name="country"
-                                                    value="Arab Emirates">
+                                                    value="Arab Emirates" required />
                                                 <label for="locate-arab">
                                                     Arab Emirates
                                                     <svg width="20" height="20" viewBox="0 0 20 20"
@@ -1580,9 +1533,7 @@
                                             </div>
                                         </div>
                                         <!-- error message  -->
-                                        @error('country')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
                                 <div class="col-lg-8 mt_25">
@@ -1593,7 +1544,7 @@
                                             <!-- input group  -->
                                             <div class="input--group">
                                                 <input id="sale-yes" type="radio" name="ownership_history"
-                                                    value="It had multiple owners">
+                                                    value="It had multiple owners" required />
                                                 <label for="sale-yes">
                                                     Yes
                                                     <svg width="20" height="20" viewBox="0 0 20 20"
@@ -1609,7 +1560,7 @@
                                             <!-- input group  -->
                                             <div class="input--group">
                                                 <input id="sale-no" type="radio" name="ownership_history"
-                                                    value="Single ownership">
+                                                    value="Single ownership" required />
                                                 <label for="sale-no">
                                                     No
                                                     <svg width="20" height="20" viewBox="0 0 20 20"
@@ -1624,9 +1575,7 @@
                                             </div>
                                         </div>
                                         <!-- error message  -->
-                                        @error('ownership_history')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
+                                        <p class="error"></p>
                                     </div>
                                 </div>
 
@@ -1640,20 +1589,14 @@
                                             <option value="Meccah">Meccah</option>
                                             <option value="Madina">Madina</option>
                                         </select>
-                                        @error('state')
-                                            <strong style="color:#9966ff">{{ $message }}</strong>
-                                        @enderror
                                     </div>
                                 </div>
                                 <div class="input--group mt_25">
                                     <label for="set-price">Set Price
                                         <span>(Minimum bid increment is $50. All bids in USD)</span></label>
                                     <div class="set-inputs">
-                                        <input type="text" name="minimum_price" placeholder="USD ($)">
+                                        <input type="text" name="minimum_price" placeholder="USD ($)" required />
                                     </div>
-                                    @error('minimum_price')
-                                        <strong style="color:#9966ff">{{ $message }}</strong>
-                                    @enderror
                                 </div>
                                 <button class="button w-100 form--btn submit-btn" type="submit">
                                     Submit
